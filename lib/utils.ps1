@@ -46,38 +46,6 @@ function Convert-NamingConventionCase {
 	}
 }
 
-function Add-ProjectReadme {
-	param ([string]$ProjectPath, [string]$ProjectName, [string]$AuthorName, [string]$UserName)
-
-	$readmeTemplate = "$PSScriptRoot/../templates/readme-template.md"
-
-	if (Test-Path "$ProjectPath/README*" -PathType Leaf) {
-		Write-Host "README already exists at $ProjectPath."
-		$overwriteReadme = $(Write-Host "Overwrite existing README? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-		if ($overwriteReadme.ToUpper() -eq 'Y') {
-			Remove-Item "$ProjectPath/README*" -Force -ErrorAction SilentlyContinue
-			Copy-Item "$readmeTemplate" -Destination "$ProjectPath/README.md" -ErrorAction SilentlyContinue
-			$readmeFile = "$ProjectPath/README.md"
-			$md = Get-Content -Path "$readmeFile"
-			$md -replace 'USERNAME', "$UserName" | Set-Content "$readmeFile"
-			$md -replace 'AUTHORNAME', "$AuthorName" | Set-Content "$readmeFile"
-			$md -replace 'PROJECTNAME', "$ProjectName" | Set-Content "$readmeFile"
-			Write-Success -Entry1 "OK" -Entry2 "README.md" -Text "overwritten at $ProjectPath"
-		}
-	} else {
-		$createReadme = $(Write-Host "Create README.md file? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-		if ($createReadme.ToUpper -eq 'Y') {
-			Copy-Item "$readmeTemplate" -Destination "$ProjectPath/README.md" -ErrorAction SilentlyContinue
-			$readmeFile = "$ProjectPath/README.md"
-			$md = Get-Content -Path "$readmeFile"
-			$md -replace 'USERNAME', "$UserName" | Set-Content "$readmeFile"
-			$md -replace 'AUTHORNAME', "$AuthorName" | Set-Content "$readmeFile"
-			$md -replace 'PROJECTNAME', "$ProjectName" | Set-Content "$readmeFile"
-			Write-Success -Entry1 "OK" -Entry2 "README.md" -Text "created at $ProjectPath"
-		}
-	}
-}
-
 function Add-ProjectGitignore {
 	param ([string]$ProjectPath, [string]$ProjectFramework)
 

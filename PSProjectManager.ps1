@@ -34,7 +34,7 @@ function New-Project {
 
 		# Create new project folder inside the existed project
 		$subProjectFolder = $(Write-Host "Create sub project folder for your project? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-		if ($subProjectFolder.ToUpper() -ne 'Y') {
+		if ($subProjectFolder.ToUpper() -eq 'Y') {
 			$ProjectLocation = "$ProjectLocation/$ProjectName"
 			# Input new project name (if it still match the old one, loop until different)
 			do {
@@ -179,6 +179,8 @@ cookiecutters_dir: "full/path/to/cookiecutters/template/dir"
 		}
 	}
 
+	Add-License -ProjectRoot $ProjectLocation -ProjectName $ProjectName
+	Add-Readme -ProjectRoot $ProjectLocation -ProjectName $ProjectName
 
 	if ($Github) {
 		if (!(Test-Path "$env:APPDATA/GitHub CLI/hosts.yml")) { gh auth login }
@@ -207,5 +209,6 @@ cookiecutters_dir: "full/path/to/cookiecutters/template/dir"
 		if ($null -eq $(git remote)) { git remote add origin "https://github.com/$UserId/$ProjectName.git" }
 	}
 
-	Add-License -ProjectRoot $ProjectLocation -ProjectName $ProjectName
+	Set-Location "$ProjectLocation/$ProjectName"
+
 }
