@@ -1,0 +1,177 @@
+{
+	"packages": [
+		{
+			"name": "ASP.NET Core WebAPI F# Template",
+			"nuget_name": "WebAPI.FSharp.Template",
+			"url": "https://github.com/MNie/FSharpNetCoreWebApiTemplate",
+			"author": "Michał Niegrzybowski",
+			"templates": [
+				{ "name": "F# ASP.NET Core Web Api", "short_name": "webapi" }
+			]
+		},
+		{
+			"name": "Bolero: F# in WebAssembly",
+			"nuget_name": "Bolero.Templates",
+			"author": "IntelliFactory",
+			"url": "https://fsbolero.io/",
+			"templates": [
+				{ "name": "Bolero Hosted Application", "short_name": "bolero-app" }
+			]
+		},
+		{
+			"name": "Eto Forms",
+			"nuget_name": "Eto.Forms.Templates",
+			"author": "Curtis Wensley",
+			"url": "https://github.com/picoe/Eto#etoforms",
+			"templates": [
+				{ "name": "Eto Application", "short_name": "etoapp" },
+				{ "name": "Eto Panel, Dialog, or Form", "short_name": "etofile" }
+			]
+		},
+		{
+			"name": "Expecto Template",
+			"nuget_name": "Expecto.Template",
+			"author": "Michał Niegrzybowski",
+			"url": "https://github.com/MNie/Expecto.Template",
+			"templates": [
+				{ "name": "Expecto .net core Template", "short_name": "expecto" }
+			]
+		},
+		{
+			"name": "F# TypeProvider Template",
+			"nuget_name": "FSharp.TypeProviders.Templates",
+			"author": "fsprojects",
+			"url": "https://github.com/fsprojects/FSharp.TypeProviders.SDK#the-f-type-provider-sdk",
+			"templates": [
+				{ "name": "Basic F# Type Provider", "short_name": "typeprovider" }
+			]
+		},
+		{
+			"name": "Fable-elmish",
+			"nuget_name": "Fable.Template.Elmish.React",
+			"author": "Maxime Mangel",
+			"url": "https://github.com/elmish/elmish",
+			"templates": [
+				{ "name": "Fable.Elmish.React App", "short_name": "fable-elmish-react" }
+			]
+		},
+		{
+			"name": "Fable, F# >| Babel",
+			"nuget_name": "Fable.Template",
+			"author": "Alfonso Garcia-Caro",
+			"url": "https://fable.io/",
+			"templates": [{ "name": "Simple Fable App", "short_name": "fable" }]
+		},
+		{
+			"name": "Fable Library",
+			"nuget_name": "Fable.Template.Library",
+			"author": "Jimmy Byrd",
+			"url": "https://github.com/TheAngryByrd/Fable.Template.Library",
+			"templates": [
+				{ "name": "Fable.Library.Template", "short_name": "fable-library" }
+			]
+		},
+		{
+			"name": "Giraffe Template",
+			"nuget_name": "giraffe-template",
+			"author": "Dustin Moris Gorski, David Sinclair and contributors",
+			"url": "https://github.com/giraffe-fsharp/giraffe-template",
+			"templates": [{ "name": "Giraffe", "short_name": "giraffe" }]
+		},
+		{
+			"name": "GtkSharp",
+			"nuget_name": "GtkSharp.Template.FSharp",
+			"author": "GtkSharp Contributors",
+			"url": "https://github.com/GtkSharp/GtkSharp",
+			"templates": [
+				{ "short_name": "gtkapp", "name": "Gtk Application" },
+				{ "short_name": "gtkdialog", "name": "Gtk Dialog" },
+				{ "short_name": "gtkwidget", "name": "Gtk Widget" },
+				{ "short_name": "gtkwindow", "name": "Gtk Window" }
+			]
+		},
+		{
+			"name": "Interstellar",
+			"nuget_name": "Interstellar.Template",
+			"author": "John Wostenberg",
+			"url": "https://github.com/fsprojects/Interstellar",
+			"templates": [
+				{ "name": "Simple Interstellar App", "short_name": "interstellar" }
+			]
+		},
+		{
+			"name": "MiniScaffold",
+			"nuget_name": "MiniScaffold",
+			"author": "Jimmy Byrd",
+			"url": "https://github.com/TheAngryByrd/MiniScaffold",
+			"templates": [{ "name": "MiniScaffold", "short_name": "mini-scaffold" }]
+		},
+		{
+			"name": "NancyFx",
+			"nuget_name": "NancyFx.Core.Template",
+			"author": "Michał Niegrzybowski",
+			"url": "https://github.com/MNie/NancyFxCore",
+			"templates": [
+				{ "name": "NancyFx F# .net core Template", "short_name": "nancyfx" }
+			]
+		},
+		{
+			"name": "ASP.NET_MVC_Core.FSharp.React",
+			"nuget_name": "ASP.NET_MVC_Core.FSharp.React",
+			"author": "Keen83",
+			"url": "https://github.com/Keen83/fsharp_template",
+			"templates": [
+				{ "name": "ASP.NET Core with React.js", "short_name": "fs-react" }
+			]
+		},
+		{
+			"name": "SAFE Template",
+			"nuget_name": "SAFE.Template",
+			"author": "Tomasz Heimowski",
+			"url": "https://safe-stack.github.io/",
+			"templates": [
+				{ "name": "SAFE-Stack Web App v5.0.9", "short_name": "SAFE" }
+			]
+		},
+		{
+			"name": "WebSharper",
+			"nuget_name": "WebSharper.Templates",
+			"author": "IntelliFactory",
+			"url": "https://github.com/dotnet-websharper/core",
+			"templates": [
+				{
+					"name": "WebSharper 6 .NET Proxy",
+					"short_name": "websharper-prx"
+				},
+				{
+					"name": "WebSharper 6 Client-Server Application",
+					"short_name": "websharper-web"
+				},
+				{
+					"name": "WebSharper 6 HTML Application",
+					"short_name": "websharper-html"
+				},
+				{
+					"name": "WebSharper 6 JavaScript Bindings",
+					"short_name": "websharper-ext"
+				},
+				{
+					"name": "WebSharper 6 Library",
+					"short_name": "websharper-lib"
+				},
+				{
+					"name": "WebSharper 6 Minimal Application",
+					"short_name": "websharper-min"
+				},
+				{
+					"name": "WebSharper 6 Service Application",
+					"short_name": "websharper-svc"
+				},
+				{
+					"name": "WebSharper 6 Single-Page Application",
+					"short_name": "websharper-spa"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"templates": [
+		{ "name": "Class Library", "short_name": "classlib" },
+		{ "name": "Console App", "short_name": "console" },
+		{ "name": "MSTest Test Project", "short_name": "mstest" },
+		{ "name": "NUnit 3 Test Project", "short_name": "nunit" },
+		{ "name": "Windows Forms App", "short_name": "winforms" },
+		{ "name": "Windows Forms Class Library", "short_name": "winformslib" },
+		{
+			"name": "Windows Forms Control Library",
+			"short_name": "winformscontrollib"
+		},
+		{ "name": "WPF Application", "short_name": "wpf" },
+		{ "name": "WPF Class Library", "short_name": "wpflib" },
+		{
+			"name": "WPF Custom Control Library",
+			"short_name": "winformscontrollib"
+		},
+		{ "name": "WPF User Control Library", "short_name": "wpfusercontrollib" },
+		{ "name": "xUnit Test Project", "short_name": "xunit" }
+	]
+}

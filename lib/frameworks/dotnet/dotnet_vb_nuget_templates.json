@@ -1,0 +1,28 @@
+{
+	"packages": [
+		{
+			"name": "GtkSharp",
+			"nuget_name": "GtkSharp.Template.VBNet",
+			"author": "GtkSharp Contributors",
+			"url": "https://github.com/GtkSharp/GtkSharp",
+			"templates": [
+				{ "short_name": "gtkapp", "name": "Gtk Application" },
+				{ "short_name": "gtkdialog", "name": "Gtk Dialog" },
+				{ "short_name": "gtkwidget", "name": "Gtk Widget" },
+				{ "short_name": "gtkwindow", "name": "Gtk Window" }
+			]
+		},
+		{
+			"name": "InteXX Assorted Templates",
+			"nuget_name": "Intexx.Templates",
+			"author": "InteXX",
+			"url": "https://github.com/InteXX/Templates",
+			"templates": [
+				{
+					"short_name": "azure-function-http",
+					"name": "Azure Function Project (HTTP Trigger)"
+				}
+			]
+		}
+	]
+}

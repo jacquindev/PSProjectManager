@@ -1,0 +1,614 @@
+{
+	"packages": [
+		{
+			"name": ".NET Aspire Project Templates",
+			"nuget_name": "Aspire.ProjectTemplates",
+			"author": "Microsoft",
+			"url": "https://github.com/dotnet/aspire",
+			"templates": [
+				{ "name": ".NET Aspire App Host", "short_name": "aspire-apphost" },
+				{ "name": ".NET Aspire Empty App", "short_name": "aspire" },
+				{
+					"name": ".NET Aspire Service Defaults",
+					"short_name": "aspire-servicedefaults"
+				},
+				{ "name": ".NET Aspire Starter App", "short_name": "aspire-starter" },
+				{
+					"name": ".NET Aspire Test Project (MSTest)",
+					"short_name": "aspire-mstest"
+				},
+				{
+					"name": ".NET Aspire Test Project (NUnit)",
+					"short_name": "aspire-nunit"
+				},
+				{
+					"name": ".NET Aspire Test Project (xUnit)",
+					"short_name": "aspire-xunit"
+				}
+			]
+		},
+		{
+			"name": ".NET Boxed",
+			"nuget_name": "Boxed.Templates",
+			"author": ".NET Boxed",
+			"url": "https://github.com/Dotnet-Boxed/Templates",
+			"templates": [
+				{ "name": "ASP.NET Core API Boxed", "short_name": "api" },
+				{ "name": "ASP.NET Core GraphQL Boxed", "short_name": "graphql" },
+				{ "name": "ASP.NET Core Orleans Boxed", "short_name": "orleans" },
+				{ "name": "NuGet Package Boxed", "short_name": "nuget" }
+			]
+		},
+		{
+			"name": ".NET Multi-platform App UI (.NET MAUI)",
+			"nuget_name": "Microsoft.Maui.Templates",
+			"author": "Microsoft",
+			"url": "https://github.com/dotnet/maui",
+			"templates": [
+				{ "name": ".NET MAUI App", "short_name": "maui" },
+				{ "name": ".NET MAUI Blazor App", "short_name": "maui-blazor" },
+				{ "name": ".NET MAUI Class Library", "short_name": "mauilib" },
+				{
+					"name": ".NET MAUI ContentPage (C#)",
+					"short_name": "maui-page-csharp"
+				},
+				{
+					"name": ".NET MAUI ContentPage (XAML)",
+					"short_name": "maui-page-xaml"
+				},
+				{
+					"name": ".NET MAUI ContentView (C#)",
+					"short_name": "maui-view-csharp"
+				},
+				{
+					"name": ".NET MAUI ContentView (XAML)",
+					"short_name": "maui-view-xaml"
+				},
+				{
+					"name": ".NET MAUI ResourceDictionary (XAML)",
+					"short_name": "maui-dick-xaml"
+				}
+			]
+		},
+		{
+			"name": "ASP.NET Core Web API (extended)",
+			"nuget_name": "Popov1024.HttpApi.Template.CSharp",
+			"author": "Andrey Popov",
+			"url": "https://github.com/popov1024/httpapi-template-csharp",
+			"templates": [
+				{ "name": "ASP.NET Core Web API (extended)", "short_name": "httpapi" }
+			]
+		},
+		{
+			"name": "ASP.NET Core Web API for AKS",
+			"nuget_name": "RobBell.AksApi.Template",
+			"author": "Rob Bell",
+			"url": "https://github.com/robbell/dotnet-aks-api-template",
+			"templates": [
+				{ "name": "ASP.NET Core WebAPI for AKS", "short_name": "aksapi" }
+			]
+		},
+		{
+			"name": "ASP.NET Core with Typescript, React and Webpack",
+			"nuget_name": "Arragro.Dotnet.TS.React.Project.Template",
+			"author": "Michael Jewell",
+			"url": "https://github.com/Arragro/Arragro.Project.Templates/tree/master/src/dotnet.ts.react",
+			"templates": [
+				{
+					"name": "ASP.NET Core with Typescript, React and Webpack",
+					"short_name": "dotnettsreact"
+				}
+			]
+		},
+		{
+			"name": "ASP.NET Core with Typescript, React, Redux and Webpack",
+			"nuget_name": "Arragro.Dotnet.TS.React.Redux.Project.Template",
+			"author": "Michael Jewell",
+			"url": "https://github.com/Arragro/Arragro.Project.Templates/tree/master/src/dotnet.ts.react.redux",
+			"templates": [
+				{
+					"name": "ASP.NET Core with Typescript, React, Redux and Webpack",
+					"short_name": "dotnettsreactredux"
+				}
+			]
+		},
+		{
+			"name": "ASP.NET Core FluentUI",
+			"nuget_name": "Microsoft.FluentUI.AspNetCore.Templates",
+			"author": "Microsoft",
+			"url": "https://github.com/microsoft/fluentui-blazor",
+			"templates": [
+				{
+					"name": "Fluent .NET Aspire Starter App",
+					"short_name": "fluentaspire-starter"
+				},
+				{
+					"name": "Fluent .NET MAUI Blazor Hybrid and Web App",
+					"short_name": "fluentmaui-blazor-web"
+				},
+				{ "name": "Fluent Blazor Web App", "short_name": "fluentblazor" },
+				{
+					"name": "Fluent Blazor WebAssembly Standalone App",
+					"short_name": "fluentblazorwasm"
+				}
+			]
+		},
+		{
+			"name": "ASP.NET Single Page Application templates",
+			"nuget_name": "Microsoft.DotNet.Web.Spa.ProjectTemplates",
+			"author": "Microsoft",
+			"url": "https://github.com/dotnet/spa-templates",
+			"templates": [
+				{ "name": "ASP.NET Core with Angular", "short_name": "angular" },
+				{ "name": "ASP.NET Core with React.js", "short_name": "react" },
+				{
+					"name": "ASP.NET Core with React.js and Redux",
+					"short_name": "reactredux"
+				}
+			]
+		},
+		{
+			"name": "AWS Lambda .NET Core Templates",
+			"nuget_name": "Amazon.Lambda.Templates",
+			"author": "AWS",
+			"url": "https://github.com/aws/aws-lambda-dotnet/tree/master/Blueprints",
+			"templates": [
+				{
+					"short_name": "lambda.CustomRuntimeFunction",
+					"name": "Lambda Custom Runtime Function (.NET 9)"
+				},
+				{
+					"short_name": "lambda.DetectImageLabels",
+					"name": "Lambda Detect Image Labels"
+				},
+				{
+					"short_name": "lambda.DynamoDB",
+					"name": "Lambda Simple DynamoDB Function"
+				},
+				{
+					"short_name": "lambda.EmptyFunction",
+					"name": "Lambda Empty Function"
+				},
+				{
+					"short_name": "lambda.EmptyTopLevelFunction",
+					"name": "Empty Top-level Function"
+				},
+				{
+					"short_name": "lambda.Kinesis",
+					"name": "Lambda Simple Kinesis Function"
+				},
+				{
+					"short_name": "lambda.KinesisFirehose",
+					"name": "Lambda Simple Kinesis Firehose Function"
+				},
+				{
+					"short_name": "lambda.LexBookTripSample",
+					"name": "Lex Book Trip Sample"
+				},
+				{
+					"short_name": "lambda.NativeAOT",
+					"name": "Lambda Function project configured for deployment using .NET 8's Native AOT feature"
+				},
+				{
+					"short_name": "lambda.Powertools",
+					"name": "Lambda Function with Powertools for AWS Lambda (.NET)"
+				},
+				{ "short_name": "lambda.S3", "name": "Lambda Simple S3 Function" },
+				{ "short_name": "lambda.SNS", "name": "Lambda Simple SNS Function" },
+				{ "short_name": "lambda.SQS", "name": "Lambda Simple SQS Function" },
+				{
+					"short_name": "lambda.image.EmptyFunction",
+					"name": "Lambda Empty Function (.NET 8 Container Image)"
+				},
+				{
+					"short_name": "lambda.SimpleApplicationLoadBalancerFunction",
+					"name": "Lambda Simple Application Load Balancer Function"
+				},
+				{
+					"short_name": "lambda.OrderFlowersChatbot",
+					"name": "Order Flowers Chatbot Tutorial"
+				},
+				{
+					"short_name": "serverless.Annotations",
+					"name": "Lambda Annotations Framework Sample"
+				},
+				{
+					"short_name": "serverless.AspNetCoreMinimalAPI",
+					"name": "Lambda ASP.NET Core Minimal API"
+				},
+				{
+					"short_name": "serverless.AspNetCoreWebAPI",
+					"name": "Lambda ASP.NET Core Web API"
+				},
+				{
+					"short_name": "serverless.AspNetCoreWebApp",
+					"name": "Lambda ASP.NET Core Web Application with Razor Pages"
+				},
+				{
+					"short_name": "serverless.EmptyServerless",
+					"name": "Lambda Empty Serverless"
+				},
+				{
+					"short_name": "serverless.image.AspNetCoreWebAPI",
+					"name": "Lambda ASP.NET Core Web API (.NET 8 Container Image)"
+				},
+				{
+					"short_name": "serverless.image.EmptyServerless",
+					"name": "Lambda Empty Serverless (.NET 8 Container Image)"
+				},
+				{
+					"short_name": "serverless.Messaging",
+					"name": "AWS Message Processing Framework for .NET Sample"
+				},
+				{
+					"short_name": "serverless.NativeAOT",
+					"name": "Serverless project configured for deployment using .NET 8's Native AOT features"
+				},
+				{
+					"short_name": "serverless.Powertools",
+					"name": "Lambda Serverless with Powertools for AWS Lambda (.NET)"
+				},
+				{
+					"short_name": "serverless.S3",
+					"name": "Serverless Simple S3 Function"
+				},
+				{
+					"short_name": "serverless.StepFunctionsHelloWorld",
+					"name": "Step Functions Hello World"
+				},
+				{
+					"short_name": "serverless.WebSocketAPI",
+					"name": "Serverless WebSocket API"
+				}
+			]
+		},
+		{
+			"name": "Avalonia UI Templates",
+			"nuget_name": "Avalonia.Templates",
+			"author": "AvaloniaUI",
+			"url": "https://github.com/AvaloniaUI/Avalonia",
+			"templates": [
+				{ "name": "Avalonia .NET App", "short_name": "avalonia.app" },
+				{ "name": "Avalonia .NET MVVM App", "short_name": "avalonia.mvvm" },
+				{
+					"name": "Avalonia Cross Platform Application",
+					"short_name": "avalonia.xplat"
+				}
+			]
+		},
+		{
+			"name": "Cake Frosting",
+			"nuget_name": "Cake.Frosting.Template",
+			"author": "Patrik Svensson",
+			"url": "https://github.com/cake-build/cake",
+			"templates": [
+				{ "name": "Cake Frosting Build Script", "short_name": "cakefrosting" }
+			]
+		},
+		{
+			"name": "Carter",
+			"nuget_name": "CarterTemplate",
+			"author": "Jonathan Channon <jonathan.channon@gmail.com>",
+			"url": "https://github.com/CarterCommunity/Carter",
+			"templates": [{ "name": "Carter Template", "short_name": "carter" }]
+		},
+		{
+			"name": "cloudscribe",
+			"nuget_name": "cloudscribe.templates",
+			"author": "Joe Audette7",
+			"url": "https://www.cloudscribe.com/introduction",
+			"templates": [
+				{
+					"name": "cloudscribe web project template",
+					"short_name": "cloudscribe"
+				}
+			]
+		},
+		{
+			"name": "DotVVM",
+			"nuget_name": "DotVVM.Templates",
+			"author": "RIGANTI",
+			"url": "https://github.com/riganti/dotvvm",
+			"templates": [
+				{ "name": "DotVVM Web Application", "short_name": "dotvvm" }
+			]
+		},
+		{
+			"name": "EISK Web API",
+			"nuget_name": "eisk.webapi",
+			"author": "Ashraf Alam",
+			"url": "https://github.com/eisk/eisk.webapi",
+			"templates": [{ "name": "Eisk Web Api", "short_name": "eiskwebapi" }]
+		},
+		{
+			"name": "Eto Forms",
+			"nuget_name": "Eto.Forms.Templates",
+			"author": "Curtis Wensley",
+			"url": "https://github.com/picoe/Eto#etoforms",
+			"templates": [
+				{ "name": "Eto Application", "short_name": "etoapp" },
+				{ "name": "Eto Panel, Dialog, or Form", "short_name": "etofile" }
+			]
+		},
+		{
+			"name": "GCC Build",
+			"nuget_name": "GCC.Build.Template",
+			"author": "Roozbeh GH.",
+			"url": "https://github.com/roozbehid/dotnet-vcxproj",
+			"templates": [
+				{
+					"name": "C/C++/CPP/VCXPROJ Build Template using GCC/G++",
+					"short_name": "gccbuild"
+				}
+			]
+		},
+		{
+			"name": "Geco",
+			"nuget_name": "iQuarc.Geco.CSharp",
+			"author": "Catalin Pop, © iQuarc 2017",
+			"url": "https://github.com/iQuarc/Geco",
+			"templates": [
+				{ "name": "Geco, [Ge]nerator [Co]nsole", "short_name": "geco" }
+			]
+		},
+		{
+			"name": "GtkSharp",
+			"nuget_name": "GtkSharp.Template.FSharp",
+			"author": "GtkSharp Contributors",
+			"url": "https://github.com/GtkSharp/GtkSharp",
+			"templates": [
+				{ "short_name": "gtkapp", "name": "Gtk Application" },
+				{ "short_name": "gtkdialog", "name": "Gtk Dialog" },
+				{ "short_name": "gtkwidget", "name": "Gtk Widget" },
+				{ "short_name": "gtkwindow", "name": "Gtk Window" }
+			]
+		},
+		{
+			"name": "GraphQL Platform Templates",
+			"nuget_name": "HotChocolate.Templates",
+			"author": "Michael Staib",
+			"url": "https://chillicream.com/docs/hotchocolate/v14",
+			"templates": [
+				{
+					"name": "GraphQL Aspire Gateway",
+					"short_name": "graphql-aspire-gateway"
+				},
+				{ "name": "GraphQL Azure Function", "short_name": "graphql-azf" },
+				{ "name": "GraphQL Gateway", "short_name": "graphql-gateway" },
+				{
+					"name": "GraphQL Gateway Managed",
+					"short_name": "graphql-gateway-managed"
+				},
+				{ "name": "GraphQL Server", "short_name": "graphql" }
+			]
+		},
+		{
+			"name": "HoNoSoFt.DotNet.Web.Spa.ProjectTemplates (VueJs + Picnic CSS)",
+			"nuget_name": "HoNoSoFt.DotNet.Web.Spa.ProjectTemplates",
+			"author": "Nordes Menard-Lamarre",
+			"url": "https://github.com/Nordes/HoNoSoFt.DotNet.Web.Spa.ProjectTemplates",
+			"templates": [
+				{
+					"name": "ASP.NET Core + Vue + Picnic + ...",
+					"short_name": "vuejs-picnic-table"
+				},
+				{
+					"name": "ASP.NET Core with Vue and Picnic",
+					"short_name": "vuejs-picnic"
+				}
+			]
+		},
+		{
+			"name": "KnowYourToolset.Templates",
+			"nuget_name": "KnowYourToolset.Templates",
+			"author": "Erik Dahl",
+			"url": "https://github.com/dahlsailrunner/knowyourtoolset-templates",
+			"templates": [
+				{ "name": "KnowYourToolset Aspire", "short_name": "kyt-aspire" },
+				{ "name": "KnowYourToolset NuGet Package", "short_name": "kyt-package" }
+			]
+		},
+		{
+			"name": "Kontent.ai Boilerplate for ASP.NET Core MVC",
+			"nuget_name": "Kontent.Ai.Boilerplate",
+			"author": "Kontent s.r.o.",
+			"url": "https://github.com/kontent-ai/boilerplate-net",
+			"templates": [
+				{
+					"name": "ASP.NET Core MVC with Kontent.ai",
+					"short_name": "kontent-ai-mvc"
+				}
+			]
+		},
+		{
+			"name": "MonoGame (.NET Core)",
+			"nuget_name": "MonoGame.Templates.CSharp",
+			"author": "MonoGame Team",
+			"url": "https://github.com/MonoGame/MonoGame",
+			"templates": [
+				{ "short_name": "mgandroid", "name": "MonoGame Android Application" },
+				{
+					"short_name": "mgdesktopgl",
+					"name": "MonoGame Cross-Platform Desktop Application"
+				},
+				{ "short_name": "mgios", "name": "MonoGame iOS Application" },
+				{ "short_name": "mglib", "name": "MonoGame Game Library" },
+				{
+					"short_name": "mgpipeline",
+					"name": "MonoGame Content Pipeline Extension"
+				},
+				{ "short_name": "mgshared", "name": "MonoGame Shared Library Project" },
+				{
+					"short_name": "mgwindowsdx",
+					"name": "MonoGame Windows Desktop Application"
+				}
+			]
+		},
+		{
+			"name": "MvxScaffolding Templates",
+			"nuget_name": "MvxScaffolding.Templates",
+			"author": "Plac3hold3r",
+			"url": "https://github.com/Plac3hold3r/MvxScaffolding",
+			"templates": [
+				{ "name": "MvxScaffolding MvvmCross Forms", "short_name": "mvxforms" },
+				{ "name": "MvxScaffolding MvvmCross Native", "short_name": "mvxnative" }
+			]
+		},
+		{
+			"name": "NSpec Templates",
+			"nuget_name": "dotnet-new-nspec",
+			"author": "BrainCrumbz",
+			"url": "https://github.com/nspec/DotNetNewNSpec",
+			"templates": [
+				{ "name": "NSpec .NET Core C# Test Project", "short_name": "nspectest" }
+			]
+		},
+		{
+			"name": "OpenMod Plugin Templates",
+			"nuget_name": "OpenMod.Templates",
+			"author": "OpenMod",
+			"url": "https://github.com/openmod/openmod/tree/master/templates",
+			"templates": [
+				{
+					"name": "OpenMod Universal Plugin",
+					"short_name": "openmod-universal-plugin"
+				},
+				{
+					"name": "OpenMod Unturned Plugin",
+					"short_name": "openmod-unturned-plugin"
+				}
+			]
+		},
+		{
+			"name": "Paulovich.Manga",
+			"nuget_name": "Paulovich.Manga",
+			"author": "Ivan Paulovich",
+			"url": "https://github.com/ivanpaulovich/clean-architecture-manga",
+			"templates": [
+				{
+					"name": "Manga: Clean Architecture for .NET Application",
+					"short_name": "manga"
+				}
+			]
+		},
+		{
+			"name": "Particular Templates",
+			"nuget_name": "ParticularTemplates",
+			"author": "Particular Software",
+			"url": "https://docs.particular.net/nservicebus/dotnet-templates",
+			"templates": [
+				{ "short_name": "nsbendpoint", "name": "NServiceBus Endpoint" },
+				{ "short_name": "nsbhandler", "name": "NServiceBus Message Handler" },
+				{ "short_name": "nsbsaga", "name": "NServiceBus Saga" }
+			]
+		},
+		{
+			"name": "PowerShell Core",
+			"nuget_name": "FiftyProtons.Templates.PSCore",
+			"author": "Adam Friedman (tintoy@tintoy.io)",
+			"url": "https://github.com/tintoy/ps-core-module-template",
+			"templates": [
+				{ "short_name": "ps-core-module", "name": "PowerShell Core RC2 module" }
+			]
+		},
+		{
+			"name": "Raspberry Pi 3",
+			"nuget_name": "RaspberryPi.Template",
+			"author": "Jeremy Lindsay",
+			"url": "https://github.com/jeremylindsayni/RaspberryPi.Template",
+			"templates": [
+				{ "name": "Empty .NET Core IoT project", "short_name": "coreiot" }
+			]
+		},
+		{
+			"name": "React Template",
+			"nuget_name": "React.Template",
+			"author": "ReactJS.NET contributors",
+			"url": "https://reactjs.net/getting-started/aspnetcore.html",
+			"templates": [
+				{
+					"name": "React.NET Starter Template",
+					"short_name": "reactnet-vanilla"
+				},
+				{
+					"name": "React.NET Webpack Starter Template",
+					"short_name": "reactnet-webpack"
+				}
+			]
+		},
+		{
+			"name": "SpecFlow DotNet Templates",
+			"nuget_name": "SpecFlow.Templates.DotNet",
+			"url": "https://github.com/SpecFlowOSS/SpecFlow",
+			"template": [
+				{
+					"name": "SpecFlow Project Template",
+					"short_name": "specflowproject",
+					"author": "SpecFlow Team"
+				},
+				{
+					"name": "SpecFlow Configuration JSON File",
+					"short_name": "specflow-json",
+					"author": "Manuel Eiwen"
+				},
+				{
+					"name": "SpecFlow Feature File",
+					"short_name": "specflow-feature",
+					"author": "Manuel Eiwen"
+				},
+				{
+					"name": "SpecFlow Plus Profile",
+					"short_name": "specflow-plus-profile",
+					"author": "Manuel Eiwen"
+				}
+			]
+		},
+		{
+			"name": "Web Client Item Templates",
+			"nuget_name": "Microsoft.Dotnet.Web.Client.ItemTemplates",
+			"author": "Microsoft",
+			"url": "https://github.com/dotnet/aspnetcore/tree/main/src/ProjectTemplates/Web.Client.ItemTemplates",
+			"templates": [
+				{ "name": "LESS Style Sheet", "short_name": "less" },
+				{ "name": "SCSS Style Sheet (SASS)", "short_name": "scss" },
+				{ "name": "TypeScript file", "short_name": "tsfile" }
+			]
+		},
+		{
+			"name": "WebSharper",
+			"nuget_name": "WebSharper.Templates",
+			"author": "IntelliFactory",
+			"url": "https://github.com/dotnet-websharper/core",
+			"templates": [
+				{
+					"name": "WebSharper 6 .NET Proxy",
+					"short_name": "websharper-prx"
+				},
+				{
+					"name": "WebSharper 6 Client-Server Application",
+					"short_name": "websharper-web"
+				},
+				{
+					"name": "WebSharper 6 HTML Application",
+					"short_name": "websharper-html"
+				},
+				{
+					"name": "WebSharper 6 Library",
+					"short_name": "websharper-lib"
+				},
+				{
+					"name": "WebSharper 6 Minimal Application",
+					"short_name": "websharper-min"
+				},
+				{
+					"name": "WebSharper 6 Service Application",
+					"short_name": "websharper-svc"
+				},
+				{
+					"name": "WebSharper 6 Single-Page Application",
+					"short_name": "websharper-spa"
+				}
+			]
+		}
+	]
+}
