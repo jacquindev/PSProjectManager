@@ -25,3 +25,4 @@ if (!$psyamlExists) {
 . "$PSScriptRoot/lib/lang_python.ps1"
 . "$PSScriptRoot/lib/lang_rust.ps1"
 . "$PSScriptRoot/lib/Add-License.ps1"
+. "$PSScriptRoot/lib/Add-Readme.ps1"

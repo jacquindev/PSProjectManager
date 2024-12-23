@@ -7,6 +7,10 @@ function Initialize-ProjectRust {
 		Set-PSDebug -Off
 	}
 
+	# Set working directory
+	Set-Location $PSScriptRoot
+	[Environment]::CurrentDirectory = $PSScriptRoot
+
 	Set-Location "$ProjectRoot"
 
 	if ($WebFramework) {
@@ -51,7 +55,7 @@ function Initialize-ProjectRust {
 						Set-Location "./$ProjectName"
 						gum spin --title="Adding Actix Web to dependencies list..." -- cargo add actix-web
 						Remove-Item "./src/main.rs" -Force -ErrorAction SilentlyContinue
-						Copy-Item -Path "$PSScriptRoot/../templates/rust_actix.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
+						Copy-Item -Path "$PSScriptRoot/templates/rust_actix.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
 						Write-LinkInformation ""
 					}
 
@@ -61,7 +65,7 @@ function Initialize-ProjectRust {
 						gum spin --title="Adding Axum to dependencies list..." -- cargo add axum
 						gum spin --title="Adding Tokio to dependencies list..." -- cargo add tokio --features="full"
 						Remove-Item "./src/main.rs" -Force -ErrorAction SilentlyContinue
-						Copy-Item -Path "$PSScriptRoot/../templates/rust_axum.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
+						Copy-Item -Path "$PSScriptRoot/templates/rust_axum.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
 						Write-LinkInformation "https://docs.rs/axum/latest/axum/"
 					}
 
@@ -70,7 +74,7 @@ function Initialize-ProjectRust {
 						Set-Location "./$ProjectName"
 						gum spin --title="Adding Gotham to dependencies list..." -- cargo add gotham
 						Remove-Item "./src/main.rs" -Force -ErrorAction SilentlyContinue
-						Copy-Item -Path "$PSScriptRoot/../templates/rust_gotham.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
+						Copy-Item -Path "$PSScriptRoot/templates/rust_gotham.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
 						Write-LinkInformation "https://gotham.rs/"
 					}
 
@@ -79,7 +83,7 @@ function Initialize-ProjectRust {
 						Set-Location "./$ProjectName"
 						gum spin --title="Adding Rocket to dependencies list..." -- cargo add rocket
 						Remove-Item "./src/main.rs" -Force -ErrorAction SilentlyContinue
-						Copy-Item -Path "$PSScriptRoot/../templates/rust_rocket.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
+						Copy-Item -Path "$PSScriptRoot/templates/rust_rocket.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
 						Write-LinkInformation "https://rocket.rs/guide/v0.5/"
 					}
 
@@ -88,7 +92,7 @@ function Initialize-ProjectRust {
 						Set-Location "./$ProjectName"
 						gum spin --title="Adding Rouille to dependencies list..." -- cargo add rouille
 						Remove-Item "./src/main.rs" -Force -ErrorAction SilentlyContinue
-						Copy-Item -Path "$PSScriptRoot/../templates/rust_rouille.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
+						Copy-Item -Path "$PSScriptRoot/templates/rust_rouille.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
 						Write-LinkInformation "https://docs.rs/rouille/latest/rouille/"
 					}
 
@@ -99,7 +103,7 @@ function Initialize-ProjectRust {
 						gum spin --title="Adding AsyncStd to dependencies list..." -- cargo add async-std --features="attributes"
 						gum spin --title="Adding Serde to dependencies list..." -- cargo add serde --features="derive"
 						Remove-Item "./src/main.rs" -Force -ErrorAction SilentlyContinue
-						Copy-Item -Path "$PSScriptRoot/../templates/rust_tide.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
+						Copy-Item -Path "$PSScriptRoot/templates/rust_tide.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
 						Write-LinkInformation "https://docs.rs/tide/latest/tide/"
 					}
 
@@ -111,7 +115,7 @@ function Initialize-ProjectRust {
 						gum spin --title="Adding EnvLogger to dependencies list..." -- cargo add env_logger
 						gum spin --title="Adding Log to dependencies list..." -- cargo add log
 						Remove-Item "./src/main.rs" -Force -ErrorAction SilentlyContinue
-						Copy-Item -Path "$PSScriptRoot/../templates/rust_thruster.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
+						Copy-Item -Path "$PSScriptRoot/templates/rust_thruster.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
 						Write-LinkInformation "https://mertz.gitbook.io/thruster"
 					}
 
@@ -121,7 +125,7 @@ function Initialize-ProjectRust {
 						gum spin --title="Adding Warp to dependencies list..." -- cargo add warp
 						gum spin --title="Adding Tokio to dependencies list..." -- cargo add tokio --features="full"
 						Remove-Item "./src/main.rs" -Force -ErrorAction SilentlyContinue
-						Copy-Item -Path "$PSScriptRoot/../templates/rust_warp.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
+						Copy-Item -Path "$PSScriptRoot/templates/rust_warp.rs" -Destination "./src/main.rs" -ErrorAction SilentlyContinue
 						Write-LinkInformation "https://docs.rs/warp/latest/warp/"
 					}
 				}

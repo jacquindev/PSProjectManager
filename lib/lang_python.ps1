@@ -11,6 +11,10 @@ function Initialize-ProjectPython {
 		[switch]$DevDependencies
 	)
 
+	# Set working directory
+	Set-Location $PSScriptRoot
+	[Environment]::CurrentDirectory = $PSScriptRoot
+
 	$langgitignore = "python"
 	$prjManager = (gum choose --limit=1 --header="Choose a Project Manager:" "pdm" "pipenv" "poetry" "rye" "uv").Trim()
 	@('pdm', 'pipenv', 'poetry', 'rye', 'uv') | ForEach-Object {

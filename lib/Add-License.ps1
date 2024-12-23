@@ -1,6 +1,10 @@
 function Add-License {
 	param ([string]$ProjectRoot, [string]$ProjectName)
 
+	if (!(gh extension list | Select-String "Shresht7/gh-license")) {
+		gum spin --title="Installing GitHub CLI extension: Shresht7/gh-license ..." -- gh extension install Shresht7/gh-license
+	}
+
 	if (!(Test-Path "$ProjectRoot/$ProjectName/LICENSE*" -PathType Leaf)) {
 		$promptLicense = $(Write-Host "Add LICENSE for your project? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
 		if ($promptLicense.ToUpper() -eq 'Y') {

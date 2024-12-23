@@ -9,6 +9,10 @@ function Initialize-ProjectNode {
 		[string]$ProjectName
 	)
 
+	# Set working directory
+	Set-Location $PSScriptRoot
+	[Environment]::CurrentDirectory = $PSScriptRoot
+
 	$langgitignore = "node"
 	$pkgManager = (gum choose --limit=1 --header="Choose a Package Manager:" "bun" "npm" "pnpm" "yarn").Trim()
 	@('bun', 'npm', 'pnpm', 'yarn') | ForEach-Object {

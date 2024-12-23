@@ -10,6 +10,10 @@ function Initialize-ProjectPHP {
 		[switch]$WebFramework
 	)
 
+	# Set working directory
+	Set-Location $PSScriptRoot
+	[Environment]::CurrentDirectory = $PSScriptRoot
+
 	Set-Location "$ProjectRoot"
 
 	if ($WebFramework) {

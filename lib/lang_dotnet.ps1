@@ -1,6 +1,10 @@
 function Initialize-ProjectDotnet {
   param ([string]$ProjectRoot, [string]$ProjectName, [switch]$Template)
 
+  # Set working directory
+  Set-Location $PSScriptRoot
+  [Environment]::CurrentDirectory = $PSScriptRoot
+
   Set-Location "$ProjectRoot"
 
   New-Item "$ProjectName" -ItemType Directory -Force -ErrorAction SilentlyContinue | Out-Null
