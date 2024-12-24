@@ -111,4 +111,8 @@ function Initialize-ProjectNode {
 
 	Add-ProjectGitignore -ProjectPath "$ProjectRoot/$ProjectName" -ProjectFramework "$langgitignore"
 	Remove-Variable langgitignore
+
+	Add-License -ProjectRoot $ProjectRoot -ProjectName $ProjectName
+	Add-Readme -ProjectRoot $ProjectRoot -ProjectName $ProjectName
+
 }

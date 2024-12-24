@@ -16,10 +16,12 @@ function Initialize-ProjectPHP {
 
 	Set-Location "$ProjectRoot"
 
+	$langgitignore = "php-cs-fixer"
 	if ($WebFramework) {
 		$phpFrameworks = (gum choose --limit=1 --header="Choose a Project Framework:" "None" "Laravel" "Symfony" "CodeIgniter" "Zend Framework/Laminas Project" "Yii Framework" "CakePHP" "Slim").Trim()
 		switch ($phpFrameworks) {
 			"Laravel" {
+				$langgitignore += ",laravel"
 				$useSail = $(Write-Host "Install Laravel Sail for your current location? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
 				if ($useSail.ToUpper() -eq 'Y') { $Sail = $True } else { $Sail = $False }
 				Initialize-ProjectPHP-Laravel -Name $ProjectName -Sail:$Sail
@@ -27,6 +29,7 @@ function Initialize-ProjectPHP {
 			}
 
 			"Symfony" {
+				$langgitignore += ",symfony"
 				$useWebApp = $(Write-Host "Build a traditional web application with Symfony? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
 				if ($useWebApp.ToUpper() -eq 'Y') { $WebApp = $True } else { $WebApp = $False }
 				Initialize-ProjectPHP-Symfony -Name "$ProjectName" -WebApp:$WebApp
@@ -34,21 +37,25 @@ function Initialize-ProjectPHP {
 			}
 
 			"CodeIgniter" {
+				$langgitignore += ",codeigniter"
 				Initialize-ProjectPHP-CodeIgniter -Name $ProjectName
 				Write-LinkInformation "https://codeigniter.com/user_guide"
 			}
 
 			"Zend Framework/Laminas Project" {
+				$langgitignore += ",zendframework"
 				Initialize-ProjectPHP-Laminas -Name $ProjectName
 				Write-LinkInformation "https://docs.laminas.dev/tutorials/"
 			}
 
 			"Yii Framework" {
+				$langgitignore += ",yii,yii2"
 				Initialize-ProjectPHP-Yii -Name $ProjectName
 				Write-LinkInformation "https://www.yiiframework.com/doc/guide/2.0/en"
 			}
 
 			"CakePHP" {
+				$langgitignore += ",cakephp2,cakephp,cakephp3"
 				Initialize-ProjectPHP-CakePHP -Name $ProjectName
 				Write-LinkInformation "https://book.cakephp.org/5/en/index.html"
 			}
@@ -60,5 +67,11 @@ function Initialize-ProjectPHP {
 
 			Default { break }
 		}
+
+		Add-ProjectGitignore -ProjectPath "$ProjectRoot/$ProjectName" -ProjectFramework "$langgitignore"
+		Remove-Variable langgitignore
+
+		Add-License -ProjectRoot $ProjectRoot -ProjectName $ProjectName
+		Add-Readme -ProjectRoot $ProjectRoot -ProjectName $ProjectName
 	}
 }
