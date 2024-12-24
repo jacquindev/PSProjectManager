@@ -1,8 +1,3 @@
-foreach ($file in $(Get-ChildItem -Path "$PSScriptRoot/frameworks/php/*" -Include *.ps1 -Recurse)) {
-	. "$file"
-}
-Remove-Variable file
-
 function Initialize-ProjectPHP {
 	param (
 		[string]$ProjectRoot,
@@ -10,9 +5,10 @@ function Initialize-ProjectPHP {
 		[switch]$WebFramework
 	)
 
-	# Set working directory
-	Set-Location $PSScriptRoot
-	[Environment]::CurrentDirectory = $PSScriptRoot
+	foreach ($file in $(Get-ChildItem -Path "$PSScriptRoot/frameworks/php/*" -Include *.ps1 -Recurse)) {
+		. "$file"
+	}
+	Remove-Variable file
 
 	Set-Location "$ProjectRoot"
 
@@ -22,7 +18,7 @@ function Initialize-ProjectPHP {
 		switch ($phpFrameworks) {
 			"Laravel" {
 				$langgitignore += ",laravel"
-				$useSail = $(Write-Host "Install Laravel Sail for your current location? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+				$useSail = Write-YesNoQuestion "Install Laravel Sail for your current location?"
 				if ($useSail.ToUpper() -eq 'Y') { $Sail = $True } else { $Sail = $False }
 				Initialize-ProjectPHP-Laravel -Name $ProjectName -Sail:$Sail
 				Write-LinkInformation "https://laravel.com/docs/11.x"
@@ -30,7 +26,7 @@ function Initialize-ProjectPHP {
 
 			"Symfony" {
 				$langgitignore += ",symfony"
-				$useWebApp = $(Write-Host "Build a traditional web application with Symfony? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+				$useWebApp = Write-YesNoQuestion "Build a traditional web application with Symfony?"
 				if ($useWebApp.ToUpper() -eq 'Y') { $WebApp = $True } else { $WebApp = $False }
 				Initialize-ProjectPHP-Symfony -Name "$ProjectName" -WebApp:$WebApp
 				Write-LinkInformation "https://symfony.com/doc/current/index.html"

@@ -1,17 +1,8 @@
-foreach ($file in $(Get-ChildItem -Path "$PSScriptRoot/frameworks/node/*" -Include *.ps1 -Recurse)) {
-	. "$file"
-}
-Remove-Variable file
-
 function Initialize-ProjectNode {
 	param (
 		[string]$ProjectRoot,
 		[string]$ProjectName
 	)
-
-	# Set working directory
-	Set-Location $PSScriptRoot
-	[Environment]::CurrentDirectory = $PSScriptRoot
 
 	$langgitignore = "node"
 	$pkgManager = (gum choose --limit=1 --header="Choose a Package Manager:" "bun" "npm" "pnpm" "yarn").Trim()
@@ -22,6 +13,11 @@ function Initialize-ProjectNode {
 			}
 		}
 	}
+
+	foreach ($file in $(Get-ChildItem -Path "$PSScriptRoot/frameworks/node/*" -Include *.ps1 -Recurse)) {
+		. "$file"
+	}
+	Remove-Variable file
 
 	Set-Location "$ProjectRoot"
 
@@ -40,9 +36,9 @@ function Initialize-ProjectNode {
 		}
 		"Astro" {
 			$langgitignore += ",astro"
-			$useTS = $(Write-Host "Use TypeScript with ASTRO? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-			$useTW = $(Write-Host "Use TailwindCSS with ASTRO? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-			$addIntegrations = $(Write-Host "Add Astro Integrations? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+			$useTS = Write-YesNoQuestion  "Use TypeScript with ASTRO?"
+			$useTW = Write-YesNoQuestion "Use TailwindCSS with ASTRO?"
+			$addIntegrations = Write-YesNoQuestion "Add Astro Integrations?"
 
 			if ($useTS.ToUpper() -eq 'Y') { $ts = $True } else { $ts = $False }
 			if ($useTW.ToUpper() -eq 'Y') { $tw = $True } else { $tw = $False }
@@ -53,7 +49,7 @@ function Initialize-ProjectNode {
 		}
 		"Angular" {
 			$langgitignore += ",angular"
-			$useTW = $(Write-Host "Use TailwindCSS with Angular? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+			$useTW = Write-YesNoQuestion "Use TailwindCSS with Angular?"
 			if ($useTW.ToUpper() -eq 'Y') { $tw = $True } else { $tw = $False }
 
 			Initialize-ProjectNode-Angular -Name $ProjectName -ProjectManager $pkgManager -tw:$tw
@@ -61,8 +57,8 @@ function Initialize-ProjectNode {
 		}
 		"NextJS" {
 			$langgitignore += ",nextjs"
-			$useTS = $(Write-Host "Use TypeScript with NextJS? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-			$useTW = $(Write-Host "Use TailwindCSS with NextJS? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+			$useTS = Write-YesNoQuestion "Use TypeScript with NextJS?"
+			$useTW = Write-YesNoQuestion "Use TailwindCSS with NextJS?"
 
 			if ($useTS.ToUpper() -eq 'Y') { $ts = $True } else { $ts = $False }
 			if ($useTW.ToUpper() -eq 'Y') { $tw = $True } else { $tw = $False }
@@ -71,8 +67,8 @@ function Initialize-ProjectNode {
 		}
 		"Remix" {
 			$langgitignore += ",remix"
-			$useTS = $(Write-Host "Use TypeScript with Remix? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-			$useTW = $(Write-Host "Use TailwindCSS with Remix? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+			$useTS = Write-YesNoQuestion "Use TypeScript with Remix?"
+			$useTW = Write-YesNoQuestion "Use TailwindCSS with Remix?"
 
 			if ($useTS.ToUpper() -eq 'Y') { $ts = $True } else { $ts = $False }
 			if ($useTW.ToUpper() -eq 'Y') { $tw = $True } else { $tw = $False }
@@ -80,8 +76,8 @@ function Initialize-ProjectNode {
 			Write-LinkInformation "https://remix.run/docs/en/main"
 		}
 		"Parcel" {
-			$useTS = $(Write-Host "Use TypeScript with Parcel? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-			$useTW = $(Write-Host "Use TailwindCSS with Parcel? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+			$useTS = Write-YesNoQuestion "Use TypeScript with Parcel?"
+			$useTW = Write-YesNoQuestion "Use TailwindCSS with Parcel?"
 
 			if ($useTS.ToUpper() -eq 'Y') { $ts = $True } else { $ts = $False }
 			if ($useTW.ToUpper() -eq 'Y') { $tw = $True } else { $tw = $False }
@@ -90,9 +86,9 @@ function Initialize-ProjectNode {
 		}
 		"SvelteKit" {
 			$langgitignore += ",svelte"
-			$useTS = $(Write-Host "Use TypeScript with SvelteKit? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-			$useTW = $(Write-Host "Use TailwindCSS with SvelteKit? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-			$addIntegrations = $(Write-Host "Add SvelteKit Integrations? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+			$useTS = Write-YesNoQuestion "Use TypeScript with SvelteKit?"
+			$useTW = Write-YesNoQuestion "Use TailwindCSS with SvelteKit?"
+			$addIntegrations = Write-YesNoQuestion "Add SvelteKit Integrations?"
 
 			if ($useTS.ToUpper() -eq 'Y') { $ts = $True } else { $ts = $False }
 			if ($useTW.ToUpper() -eq 'Y') { $tw = $True } else { $tw = $False }
@@ -101,7 +97,7 @@ function Initialize-ProjectNode {
 			Write-LinkInformation "https://svelte.dev/docs/kit/introduction"
 		}
 		"Vite" {
-			$useTS = $(Write-Host "Use TypeScript with Vite? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+			$useTS = Write-YesNoQuestion "Use TypeScript with Vite?"
 			if ($useTS.ToUpper() -eq 'Y') { $ts = $True } else { $ts = $False }
 			Initialize-ProjectNode-Vite -Name $ProjectName -ProjectManager $pkgManager -ts:$ts
 			Write-LinkInformation "https://vite.dev/guide/"

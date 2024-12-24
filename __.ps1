@@ -18,11 +18,13 @@ if (!$psyamlExists) {
 	return
 }
 
+. "$PSScriptRoot/lib/Get-DevDrive.ps1"
 . "$PSScriptRoot/lib/utils.ps1"
 . "$PSScriptRoot/lib/lang_dotnet.ps1"
 . "$PSScriptRoot/lib/lang_node.ps1"
 . "$PSScriptRoot/lib/lang_php.ps1"
 . "$PSScriptRoot/lib/lang_python.ps1"
 . "$PSScriptRoot/lib/lang_rust.ps1"
+. "$PSScriptRoot/lib/Add-Gitignore.ps1"
 . "$PSScriptRoot/lib/Add-License.ps1"
 . "$PSScriptRoot/lib/Add-Readme.ps1"

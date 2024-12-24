@@ -1,42 +1,34 @@
 {
 	"templates": [
+		{ "name": "API Controller", "short_name": "apicontroller" },
 		{ "name": "ASP.NET Core Empty", "short_name": "web" },
 		{ "name": "ASP.NET Core gRPC Service", "short_name": "grpc" },
 		{ "name": "ASP.NET Core Web API", "short_name": "webapi" },
 		{ "name": "ASP.NET Core Web API (native AOT)", "short_name": "webapiaot" },
-		{
-			"name": "ASP.NET Core Web App (Model-View-Controller)",
-			"short_name": "mvc"
-		},
+		{ "name": "ASP.NET Core Web App (Model-View-Controller)", "short_name": "mvc" },
 		{ "name": "ASP.NET Core Web API (Razor Pages)", "short_name": "webapp" },
 		{ "name": "Blazor Web App", "short_name": "blazor" },
 		{ "name": "Blazor WebAssembly Standalone App", "short_name": "blazorwasm" },
 		{ "name": "Class Library", "short_name": "classlib" },
 		{ "name": "ConsoleApp", "short_name": "console" },
-		{
-			"name": "MSTest Playwright Test Project",
-			"short_name": "mstest-playwright"
-		},
+		{ "name": "MSTest Playwright Test Project", "short_name": "mstest-playwright" },
 		{ "name": "MSTest Test Project", "short_name": "mstest" },
+		{ "name": "MVC Controller", "short_name": "mvccontroller" },
+		{ "name": "MVC ViewImports", "short_name": "viewimports" },
+		{ "name": "MVC ViewStart", "short_name": "viewstart" },
 		{ "name": "NUnit 3 Test Project", "short_name": "nunit" },
-		{
-			"name": "NUnit Playwright Test Project",
-			"short_name": "nunit-playwright"
-		},
+		{ "name": "NUnit Playwright Test Project", "short_name": "nunit-playwright" },
 		{ "name": "Razor Class Library", "short_name": "razorclasslib" },
+		{ "name": "Razor Component", "short_name": "razorcomponent" },
+		{ "name": "Razor Page", "short_name": "page" },
+		{ "name": "Razor View", "short_name": "view" },
 		{ "name": "Windows Forms App", "short_name": "winforms" },
 		{ "name": "Windows Forms Class Library", "short_name": "winformslib" },
-		{
-			"name": "Windows Forms Control Library",
-			"short_name": "winformscontrollib"
-		},
+		{"name": "Windows Forms Control Library", "short_name": "winformscontrollib" },
 		{ "name": "Worker Service", "short_name": "worker" },
 		{ "name": "WPF Application", "short_name": "wpf" },
 		{ "name": "WPF Class Library", "short_name": "wpflib" },
-		{
-			"name": "WPF Custom Control Library",
-			"short_name": "wpfcustomcontrollib"
-		},
+		{ "name": "WPF Custom Control Library", "short_name": "wpfcustomcontrollib" },
 		{ "name": "WPF User Control Library", "short_name": "wpfusercontrollib" },
 		{ "name": "xUnit Test Project", "short_name": "xunit" }
 	]

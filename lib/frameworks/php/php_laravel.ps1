@@ -29,7 +29,7 @@ function Initialize-ProjectPHP-Laravel {
 		gum spin --title="Installing Laravel Sail to your current application..." -- composer require laravel/sail --dev
 		gum spin --title="Adding .devcontainer folder to your current application..." -- php artisan sail:install --devcontainer
 
-		$extra = $(Write-Host "Add Extra Services to your application? (y/n) " -NoNewline -ForegroundColor Cyan; Read-Host)
+		$extra = Write-YesNoQuestion "Add Extra Services to your application?"
 		if ($extra.ToUpper() -eq 'Y') {
 			$services = @()
 			$extraServices = (gum choose --no-limit --header="Choose Extra Services to Install:" "mysql" "pgsql" "mariadb" "mongodb" "redis" "memcached" "meilisearch" "typesense" "minio" "mailpit" "selenium" "soketi").Trim()

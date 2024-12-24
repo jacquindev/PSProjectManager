@@ -2,13 +2,11 @@
 	"templates": [
 		{ "name": "ASP.NET Core Empty", "short_name": "web" },
 		{ "name": "ASP.NET Core Web API", "short_name": "webapi" },
-		{
-			"name": "ASP.NET Core Web API (Model-View-Controller)",
-			"short_name": "mvc"
-		},
+		{ "name": "ASP.NET Core Web API (Model-View-Controller)", "short_name": "mvc" },
 		{ "name": "Class Library", "short_name": "classlib" },
 		{ "name": "Console App", "short_name": "console" },
 		{ "name": "MSTest Test Project", "short_name": "mstest" },
+		{ "name": "NUnit 3 Test Item", "short_name": "nunit-test" },
 		{ "name": "NUnit 3 Test Project", "short_name": "nunit" },
 		{ "name": "Worker Service", "short_name": "worker" },
 		{ "name": "xUnit Test Project", "short_name": "xunit" }

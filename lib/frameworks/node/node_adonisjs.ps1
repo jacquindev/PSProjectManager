@@ -21,7 +21,7 @@ function Initialize-ProjectNode-Adonisjs {
 				"Solid" { $adonisCmds += @('--adapter=solid') }
 				"Svelte" { $adonisCmds += @('--adapter=svelte') }
 			}
-			$inertiaSsr = $(Write-Host "Turn server-side rendering ON (y) or OFF (n)? " -ForegroundColor Cyan -NoNewline; Read-Host)
+			$inertiaSsr = Write-YesNoQuestion "Turn server-side rendering ON (Y) or OFF (n)? "
 			if ($inertiaSsr.ToUpper() -eq 'Y') { $adonisCmds += @('--ssr') } else { $adonisCmds += @('--no-ssr') }
 		}
 	}

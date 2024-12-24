@@ -46,29 +46,26 @@ function Convert-NamingConventionCase {
 	}
 }
 
-function Add-ProjectGitignore {
-	param ([string]$ProjectPath, [string]$ProjectFramework)
+function Write-LinkInformation {
+	param ([string]$Link)
 
-	$gitignoreExists = Test-Path "$ProjectPath/.gitignore" -PathType Leaf
-	if ($gitignoreExists) {
-		Write-Host ".gitignore already exists at $ProjectPath."
-		$overwriteGitignore = $(Write-Host "Overwrite existing .gitignore? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-		if ($overwriteGitignore.ToUpper -eq 'Y') {
-			Remove-Item "$ProjectPath/.gitignore" -Force -ErrorAction SilentlyContinue
-			New-Item -Path "$ProjectPath/.gitignore" -Force -ErrorAction SilentlyContinue | Out-Null
-			$gitignoreContent = (Invoke-WebRequest -Uri "https://www.toptal.com/developers/gitignore/api/$ProjectFramework").Content
-			Set-Content "$ProjectPath/.gitignore" -Value "$gitignoreContent"
-			Write-Success -Entry1 "OK" -Entry2 ".gitignore" -Text "overwritten at $ProjectPath"
-		}
-	} else {
-		$createGitignore = $(Write-Host "Create .gitignore? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
-		if ($createGitignore.ToUpper -eq 'Y') {
-			New-Item -Path "$ProjectPath/.gitignore" -Force -ErrorAction SilentlyContinue | Out-Null
-			$gitignoreContent = (Invoke-WebRequest -Uri "https://www.toptal.com/developers/gitignore/api/$ProjectFramework").Content
-			Set-Content "$ProjectPath/.gitignore" -Value "$gitignoreContent"
-			Write-Success -Entry1 "OK" -Entry2 ".gitignore" -Text "created at $ProjectPath"
-		}
-	}
+	$webpage = (gum style --foreground="#74c7ec" --italic "$Link")
+	Write-Host "🔗  Visit $webpage for more information"
+	''
+}
+
+function Write-YesNoQuestion {
+	param ([string]$Question)
+
+	$ask = (gum style --foreground="#94e2d5" --italic "$Question")
+	$yN = (gum style --foreground="#9399b2" --bold "[Y/n]:")
+	Write-Host "❔  $ask $yN " -NoNewline; Read-Host
+}
+
+function Write-PromptInput {
+	param ([string]$Prompt, [string]$Example)
+
+	gum input --prompt.foreground="#cba6f7" --prompt="⭐  $Prompt ❯ " --placeholder="  $Example"
 }
 
 function Remove-LockFiles {
@@ -78,12 +75,4 @@ function Remove-LockFiles {
 			Remove-Item -Path "$ProjectPath/$_" -Force -ErrorAction SilentlyContinue
 		}
 	}
-}
-
-function Write-LinkInformation {
-	param ([string]$Link)
-
-	$webpage = (gum style --foreground="#74c7ec" --italic "$Link")
-	Write-Host "$emoji" -NoNewline
-	Write-Host "👉  Visit $webpage for more information"
 }

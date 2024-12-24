@@ -10,13 +10,94 @@
 			]
 		},
 		{
+			"name": "ASP.NET_MVC_Core.FSharp.React",
+			"nuget_name": "ASP.NET_MVC_Core.FSharp.React",
+			"author": "Keen83",
+			"url": "https://github.com/Keen83/fsharp_template",
+			"templates": [{ "name": "ASP.NET Core with React.js", "short_name": "fs-react" }]
+		},
+		{
+			"name": "AWS Lambda .NET Core Templates",
+			"nuget_name": "Amazon.Lambda.Templates",
+			"author": "AWS",
+			"url": "https://github.com/aws/aws-lambda-dotnet/tree/master/Blueprints",
+			"templates": [
+				{ "name": "Lambda ASP.NET Core Web API", "short_name": "serverless.AspNetCoreMinimalAPI" },
+				{ "name": "Lambda ASP.NET Core Web API (.NET 8 Container Image)", "short_name": "serverless.image.AspNetCoreWebAPI" },
+				{ "name": "Lambda Custom Runtime Function (.NET 9)", "short_name": "lambda.CustomRuntimeFunction" },
+				{ "name": "Lambda Detect Image Labels", "short_name": "lambda.DetectImageLabels" },
+				{ "name": "Lambda Empty Function", "short_name": "lambda.EmptyFunction" },
+				{ "name": "Lambda Empty Function (.NET 8 Container Image)", "short_name": "lambda.image.EmptyFunction" },
+				{ "name": "Lambda Empty Serverless", "short_name": "serverless.EmptyServerless" },
+				{ "name": "Lambda Empty Serverless (.NET 8 Container Image)", "short_name": "serverless.image.EmptyServerless" },
+				{ "name": "Lambda Function project configured for deployment using .NET 8's Native AOT feature.", "short_name": "lambda.NativeAOT" },
+				{ "name": "Lambda Giraffe Web App", "short_name": "serverless.Giraffe" },
+				{ "name": "Lambda Simple DynamoDB Function", "short_name": "lambda.DynamoDB" },
+				{ "name": "Lambda Simple Kinesis Function", "short_name": "lambda.Kinesis" },
+				{ "name": "Lambda Simple S3 Function", "short_name": "lambda.S3" },
+				{ "name": "Serverless Detect Image Labels", "short_name": "serverless.DetectImageLabels" },
+				{ "name": "Serverless project configured for deployment using .NET 8's Native AOT feature.", "short_name": "serverless.NativeAOT" },
+				{ "name": "Serverless Simple S3 Function", "short_name": "serverless.S3" },
+				{ "name": "Step Functions Hello World", "short_name": "serverless.StepFunctionsHelloWorld" }
+			]
+		},
+		{
+			"name": "Avalonia UI Templates",
+			"nuget_name": "Avalonia.Templates",
+			"author": "AvaloniaUI",
+			"url": "https://github.com/AvaloniaUI/Avalonia",
+			"templates": [
+				{ "name": "Avalonia .NET App", "short_name": "avalonia.app" },
+				{ "name": "Avalonia .NET MVVM App", "short_name": "avalonia.mvvm" },
+				{ "name": "Avalonia Cross Platform Application", "short_name": "avalonia.xplat" },
+				{ "name": "Avalonia TemplatedControl", "short_name": "avalonia.templatedcontrol" },
+				{ "name": "Avalonia UserControl", "short_name": "avalonia.usercontrol" },
+				{ "name": "Avalonia Window", "short_name": "avalonia.window" }
+			]
+		},
+		{
+			"name": "Azure Functions .NET Collection of Item Templates",
+			"nuget_name": "Microsoft.Azure.Functions.Worker.ItemTemplates",
+			"author": "Microsoft",
+			"url": "https://github.com/Azure/azure-functions-templates",
+			"templates": [
+				{ "name": "BlobTrigger", "short_name": "blob" },
+				{ "name": "CosmosDBTrigger", "short_name": "cosmos" },
+				{ "name": "EventGridTrigger", "short_name": "eventgrid" },
+				{ "name": "EventHubTrigger", "short_name": "eventhub" },
+				{ "name": "HttpTrigger", "short_name": "http" },
+				{ "name": "QueueTrigger", "short_name": "queue" },
+				{ "name": "TimerTrigger", "short_name": "timer" }
+			]
+		},
+		{
+			"name": "Azure Functions .NET Collection of WebJobs Item Templates",
+			"nuget_name": "Microsoft.Azure.WebJobs.ItemTemplates",
+			"author": "Microsoft",
+			"url": "https://github.com/Azure/azure-functions-templates",
+			"templates": [
+				{ "name": "BlobTrigger", "short_name": "blob" },
+				{ "name": "CosmosDBTrigger", "short_name": "cosmos" },
+				{ "name": "EventGridCloudEventTrigger", "short_name": "eventgridcloudevent" },
+				{ "name": "EventGridTrigger", "short_name": "eventgrid" },
+				{ "name": "EventHubTrigger", "short_name": "eventhub" },
+				{ "name": "HttpTrigger", "short_name": "http" },
+				{ "name": "TimerTrigger", "short_name": "timer" }
+			]
+		},
+		{
+			"name": "Azure Functions .NET WebJobs Project Template",
+			"nuget_name": "Microsoft.Azure.WebJobs.ProjectTemplates",
+			"author": "Microsoft",
+			"url": "https://github.com/Azure/azure-functions-templates",
+			"templates": [{ "name": "Azure Functions", "short_name": "func" }]
+		},
+		{
 			"name": "Bolero: F# in WebAssembly",
 			"nuget_name": "Bolero.Templates",
 			"author": "IntelliFactory",
 			"url": "https://fsbolero.io/",
-			"templates": [
-				{ "name": "Bolero Hosted Application", "short_name": "bolero-app" }
-			]
+			"templates": [{ "name": "Bolero Hosted Application", "short_name": "bolero-app" }]
 		},
 		{
 			"name": "Eto Forms",
@@ -33,27 +114,21 @@
 			"nuget_name": "Expecto.Template",
 			"author": "Michał Niegrzybowski",
 			"url": "https://github.com/MNie/Expecto.Template",
-			"templates": [
-				{ "name": "Expecto .net core Template", "short_name": "expecto" }
-			]
+			"templates": [{ "name": "Expecto .net core Template", "short_name": "expecto" }]
 		},
 		{
 			"name": "F# TypeProvider Template",
 			"nuget_name": "FSharp.TypeProviders.Templates",
 			"author": "fsprojects",
 			"url": "https://github.com/fsprojects/FSharp.TypeProviders.SDK#the-f-type-provider-sdk",
-			"templates": [
-				{ "name": "Basic F# Type Provider", "short_name": "typeprovider" }
-			]
+			"templates": [{ "name": "Basic F# Type Provider", "short_name": "typeprovider" }]
 		},
 		{
 			"name": "Fable-elmish",
 			"nuget_name": "Fable.Template.Elmish.React",
 			"author": "Maxime Mangel",
 			"url": "https://github.com/elmish/elmish",
-			"templates": [
-				{ "name": "Fable.Elmish.React App", "short_name": "fable-elmish-react" }
-			]
+			"templates": [{ "name": "Fable.Elmish.React App", "short_name": "fable-elmish-react" }]
 		},
 		{
 			"name": "Fable, F# >| Babel",
@@ -67,9 +142,7 @@
 			"nuget_name": "Fable.Template.Library",
 			"author": "Jimmy Byrd",
 			"url": "https://github.com/TheAngryByrd/Fable.Template.Library",
-			"templates": [
-				{ "name": "Fable.Library.Template", "short_name": "fable-library" }
-			]
+			"templates": [{ "name": "Fable.Library.Template", "short_name": "fable-library" }]
 		},
 		{
 			"name": "Giraffe Template",
@@ -95,8 +168,16 @@
 			"nuget_name": "Interstellar.Template",
 			"author": "John Wostenberg",
 			"url": "https://github.com/fsprojects/Interstellar",
+			"templates": [{ "name": "Simple Interstellar App", "short_name": "interstellar" }]
+		},
+		{
+			"name": "KubeOps Dotnet New Templates",
+			"nuget_name": "KubeOps.Templates",
+			"author": "Christoph Bühler",
+			"url": "https://github.com/buehler/dotnet-operator-sdk",
 			"templates": [
-				{ "name": "Simple Interstellar App", "short_name": "interstellar" }
+				{ "name": "Kubernetes Operator", "short_name": "operator" },
+				{ "name": "Kubernetes Operator Empty", "short_name": "operator-empty" }
 			]
 		},
 		{
@@ -111,27 +192,14 @@
 			"nuget_name": "NancyFx.Core.Template",
 			"author": "Michał Niegrzybowski",
 			"url": "https://github.com/MNie/NancyFxCore",
-			"templates": [
-				{ "name": "NancyFx F# .net core Template", "short_name": "nancyfx" }
-			]
-		},
-		{
-			"name": "ASP.NET_MVC_Core.FSharp.React",
-			"nuget_name": "ASP.NET_MVC_Core.FSharp.React",
-			"author": "Keen83",
-			"url": "https://github.com/Keen83/fsharp_template",
-			"templates": [
-				{ "name": "ASP.NET Core with React.js", "short_name": "fs-react" }
-			]
+			"templates": [{ "name": "NancyFx F# .net core Template", "short_name": "nancyfx" }]
 		},
 		{
 			"name": "SAFE Template",
 			"nuget_name": "SAFE.Template",
 			"author": "Tomasz Heimowski",
 			"url": "https://safe-stack.github.io/",
-			"templates": [
-				{ "name": "SAFE-Stack Web App v5.0.9", "short_name": "SAFE" }
-			]
+			"templates": [{ "name": "SAFE-Stack Web App v5.0.9", "short_name": "SAFE" }]
 		},
 		{
 			"name": "WebSharper",
@@ -139,37 +207,14 @@
 			"author": "IntelliFactory",
 			"url": "https://github.com/dotnet-websharper/core",
 			"templates": [
-				{
-					"name": "WebSharper 6 .NET Proxy",
-					"short_name": "websharper-prx"
-				},
-				{
-					"name": "WebSharper 6 Client-Server Application",
-					"short_name": "websharper-web"
-				},
-				{
-					"name": "WebSharper 6 HTML Application",
-					"short_name": "websharper-html"
-				},
-				{
-					"name": "WebSharper 6 JavaScript Bindings",
-					"short_name": "websharper-ext"
-				},
-				{
-					"name": "WebSharper 6 Library",
-					"short_name": "websharper-lib"
-				},
-				{
-					"name": "WebSharper 6 Minimal Application",
-					"short_name": "websharper-min"
-				},
-				{
-					"name": "WebSharper 6 Service Application",
-					"short_name": "websharper-svc"
-				},
-				{
-					"name": "WebSharper 6 Single-Page Application",
-					"short_name": "websharper-spa"
+				{ "name": "WebSharper 6 .NET Proxy", "short_name": "websharper-prx" },
+				{ "name": "WebSharper 6 Client-Server Application", "short_name": "websharper-web" },
+				{ "name": "WebSharper 6 HTML Application", "short_name": "websharper-html" },
+				{ "name": "WebSharper 6 JavaScript Bindings", "short_name": "websharper-ext" },
+				{ "name": "WebSharper 6 Library", "short_name": "websharper-lib" },
+				{ "name": "WebSharper 6 Minimal Application", "short_name": "websharper-min" },
+				{ "name": "WebSharper 6 Service Application", "short_name": "websharper-svc" },
+				{ "name": "WebSharper 6 Single-Page Application", "short_name": "websharper-spa"
 				}
 			]
 		}

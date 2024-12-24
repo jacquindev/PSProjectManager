@@ -1,0 +1,13 @@
+aiohttp[speedups]
+Bottle
+CherryPy
+CubicWeb
+Dash
+Django
+djangorestframework
+Falcon
+Flask
+litestar[standard]
+Pyramid
+Quart
+Sanic
