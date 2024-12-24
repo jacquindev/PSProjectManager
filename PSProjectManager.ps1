@@ -45,7 +45,8 @@ function New-Project {
 			$ProjectName = $newProjectName
 
 		} else {
-			Write-Host "Opening $ProjectName with your editor..."
+			# Write-Host "Opening $ProjectName with your editor..."
+			# code .
 			break
 		}
 	}
@@ -178,9 +179,6 @@ cookiecutters_dir: "full/path/to/cookiecutters/template/dir"
 			}
 		}
 	}
-
-	Add-License -ProjectRoot $ProjectLocation -ProjectName $ProjectName
-	Add-Readme -ProjectRoot $ProjectLocation -ProjectName $ProjectName
 
 	if ($Github) {
 		if (!(Test-Path "$env:APPDATA/GitHub CLI/hosts.yml")) { gh auth login }

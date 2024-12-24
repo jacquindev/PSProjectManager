@@ -12,6 +12,8 @@ function Initialize-ProjectRust {
 	[Environment]::CurrentDirectory = $PSScriptRoot
 
 	Set-Location "$ProjectRoot"
+	$ProjectName = Convert-NamingConventionCase -inputString $ProjectName -kebab
+	$langgitignore = "rust,rust-analyzer"
 
 	if ($WebFramework) {
 		$webFrameworkType = (gum choose --limit=1 --header="Choose FrontEnd / BackEnd web framework type:" "Frontend" "Backend").Trim()
@@ -40,6 +42,7 @@ function Initialize-ProjectRust {
 					}
 
 					"Perseus" {
+
 						$perseus = Get-Command perseus -ErrorAction SilentlyContinue
 						if (!$perseus) { gum spin --title="Installing perseus-cli..." -- cargo-binstall --no-confirm perseus-cli }
 						perseus new $ProjectName
@@ -135,4 +138,11 @@ function Initialize-ProjectRust {
 		cargo new $ProjectName
 		Set-Location "./$ProjectName"
 	}
+
+	Add-ProjectGitignore -ProjectPath "$ProjectRoot/$ProjectName" -ProjectFramework "$langgitignore"
+	Remove-Variable langgitignore
+
+	Add-License -ProjectRoot $ProjectRoot -ProjectName $ProjectName
+	Add-Readme -ProjectRoot $ProjectRoot -ProjectName $ProjectName
+
 }
