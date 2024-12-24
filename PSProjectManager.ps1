@@ -210,3 +210,61 @@ cookiecutters_dir: "full/path/to/cookiecutters/template/dir"
 	Set-Location "$ProjectLocation/$ProjectName"
 
 }
+
+function Remove-Project {
+	[CmdletBinding()]
+	param (
+		[Parameter(Mandatory = $true, Position = 0, HelpMessage = 'Define the name of your project')]
+		[Alias('n', 'p')][string]$ProjectName,
+
+		[Parameter(HelpMessage = 'Whether or not to remove project GitHub Repository')]
+		[Alias('g')][switch]$Github,
+
+		[Alias('f')][switch]$Force
+	)
+
+	. "$PSScriptRoot/lib/Get-DevDrive.ps1"
+
+	# Determine where to store all the projects (on DevDrive / in $HOME directory)
+	if ($(Get-DevDrive) -eq 'No Dev Drive found on the system.') { $ProjectLocation = "$HOME/projects" }
+	else { $ProjectLocation = "$(Get-DevDrive)/projects" }
+	if (!(Test-Path $ProjectLocation -PathType Container)) {
+		New-Item "$ProjectLocation" -ItemType Directory -Force -ErrorAction SilentlyContinue | Out-Null
+	}
+
+	$prettyName = (gum style --bold --foreground="#a6da95" "$ProjectName")
+
+	if (Test-Path "$ProjectLocation/$ProjectName" -PathType Container) {
+		if ($Force) {
+			Remove-Item "$ProjectLocation/$ProjectName" -Recurse -Force -ErrorAction SilentlyContinue
+			if ($?) { Write-Host "Project $prettyName removed successfully." }
+		} else {
+			$promptRemove = $(Write-Host "Found $ProjectLocation/$ProjectName. Remove? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+			if ($promptRemove.ToUpper() -eq 'Y') {
+				Remove-Item "$ProjectLocation/$ProjectName" -Recurse -Force -ErrorAction SilentlyContinue
+				if ($?) { Write-Host "Project $prettyName removed successfully." }
+			}
+		}
+	}
+
+	if ($GitHub) {
+		$gitUserId = (gh auth status | Select-Object -Index 1).Split(' ')[8].Trim()
+		$prettyRepo = (gum style --bold --foreground="#a6da95" "$gitUserId/$ProjectName")
+		$prettyCmd = (gum style --italic --foreground="#cba6f7" "gh auth refresh -s delete_repo")
+
+		if (!(Test-Path "$env:APPDATA/GitHub CLI/hosts.yml")) { gh auth login }
+
+		if (gh repo list | Select-String "$gitUserId/$ProjectName") {
+			if ($Force) {
+				Write-Host "Assuming that you have run $prettyCmd..."
+				gh repo delete $ProjectName --yes
+			} else {
+				$promptRemove = $(Write-Host "Found GitHub repository for $prettyRepo. Delete? (y/n) " -ForegroundColor Cyan -NoNewline; Read-Host)
+				if ($promptRemove.ToUpper() -eq 'Y') {
+					Write-Host "Assuming that you have run $prettyCmd..."
+					gh repo delete $ProjectName --yes
+				}
+			}
+		}
+	}
+}
