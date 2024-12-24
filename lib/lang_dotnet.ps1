@@ -10,12 +10,15 @@ function Initialize-ProjectDotnet {
   New-Item "$ProjectName" -ItemType Directory -Force -ErrorAction SilentlyContinue | Out-Null
   Set-Location "./$ProjectName"
 
+  $langgitignore = "dotnetcore"
+
   if ($Template) {
     $dotnetLanguage = (gum choose --limit=1 --header="Choose a DotNet Project Language:" "C#" "F#" "VB")
     $whichTemplateType = $(Write-Host "Use built-in templates (y) or NuGet.org templates (n)? " -ForegroundColor Cyan -NoNewline; Read-Host)
     if ($whichTemplateType.ToUpper() -eq 'Y') {
       switch ($dotnetLanguage) {
         "C#" {
+          $langgitignore += ",csharp"
           $templates = Get-Content "$PSScriptRoot/frameworks/dotnet/dotnet_csharp_builtin_templates.json" | ConvertFrom-Json
           $templates = $templates.templates
 
@@ -26,6 +29,7 @@ function Initialize-ProjectDotnet {
         }
 
         "F#" {
+          $langgitignore += ",fsharp"
           $templates = Get-Content "$PSScriptRoot/frameworks/dotnet/dotnet_fsharp_builtin_templates.json" | ConvertFrom-Json
           $templates = $templates.templates
 
@@ -36,6 +40,7 @@ function Initialize-ProjectDotnet {
         }
 
         "VB" {
+          $langgitignore += ",visualbasic"
           $templates = Get-Content "$PSScriptRoot/frameworks/dotnet/dotnet_vb_builtin_templates.json" | ConvertFrom-Json
           $templates = $templates.templates
 
@@ -48,6 +53,7 @@ function Initialize-ProjectDotnet {
     } else {
       switch ($dotnetLanguage) {
         "C#" {
+          $langgitignore += ",csharp"
           $templates = Get-Content "$PSScriptRoot/frameworks/dotnet/dotnet_csharp_nuget_templates.json" | ConvertFrom-Json
 
           $installPackage = (gum choose --limit=1 --header="Choose A Template Package:" $($templates.packages.nuget_name)).Trim()
@@ -65,6 +71,7 @@ function Initialize-ProjectDotnet {
         }
 
         "F#" {
+          $langgitignore += ",fsharp"
           $templates = Get-Content "$PSScriptRoot/frameworks/dotnet/dotnet_fsharp_nuget_templates.json" | ConvertFrom-Json
 
           $installPackage = (gum choose --limit=1 --header="Choose A Template Package:" $($templates.packages.nuget_name)).Trim()
@@ -82,6 +89,7 @@ function Initialize-ProjectDotnet {
         }
 
         "VB" {
+          $langgitignore += ",visualbasic"
           $templates = Get-Content "$PSScriptRoot/frameworks/dotnet/dotnet_vb_nuget_templates.json" | ConvertFrom-Json
 
           $installPackage = (gum choose --limit=1 --header="Choose A Template Package:" $($templates.packages.nuget_name)).Trim()
@@ -103,5 +111,11 @@ function Initialize-ProjectDotnet {
     ''
     Write-Host "Find more templates at " -NoNewline
     Write-Host "https://www.nuget.org/packages" -ForegroundColor Blue
+
+    Add-ProjectGitignore -ProjectPath "$ProjectRoot/$ProjectName" -ProjectFramework "$langgitignore"
+    Remove-Variable langgitignore
+
+    Add-License -ProjectRoot $ProjectRoot -ProjectName $ProjectName
+    Add-Readme -ProjectRoot $ProjectRoot -ProjectName $ProjectName
   }
 }
