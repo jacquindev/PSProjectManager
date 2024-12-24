@@ -1,4 +1,8 @@
-<h1 align="center">Welcome to PSProjectManager 👋</h1>
+<h1 align="center">PSProjectManager 👋</h1>
+
+<h3 align="center">A PowerShell Command Line Tool To Manage Your Projects</h3>
+
+<br/>
 
 <div align="center">
 <p>
@@ -9,25 +13,39 @@
 </p>
 </div>
 
-<br/>
+<hr/>
 
 <div align="center">
   <a href="#author"><kbd> <br> 👤 Author <br> </kbd></a>&ensp;&ensp;
   <a href="#contribute"><kbd> <br> 🤝 Contribute <br> </kbd></a>&ensp;&ensp;
+  <a href="#contribute"><kbd> <br> 🍿 Prerequisites <br> </kbd></a>&ensp;&ensp;
   <a href="#features"><kbd> <br> ✨ Features <br> </kbd></a>&ensp;&ensp;
   <a href="#install"><kbd> <br> 🌷 Install <br> </kbd></a>&ensp;&ensp;
   <a href="#usage"><kbd> <br> 🙈 Usage <br> </kbd></a>&ensp;&ensp;
 </div>
 
+<br/>
+
+## 🍿 Prerequisites
+
+- **[Git for Windows](https://git-scm.com/downloads)**
+- **[GitHub CLI](https://github.com/cli/cli)**
+- **[Gum](https://github.com/charmbracelet/gum)**
+
+To work with multiple configuration files, **_PowerShell Modules_** required:
+
+- **[PSToml](https://github.com/jborean93/PSToml)**
+- **[powershell-yaml](https://github.com/cloudbase/powershell-yaml)**
+
 ## ✨ Features
 
-- **Use DevDrive**: The `New-Project` function will automatically set a folder named `projects` in your DevDrive location. If DevDrive is not found, it will be created at `$HOME/projects`.
-- **CookieCutter**: A command line to initialize new project from [GitHub Repositories Templates](https://github.com/search?q=cookiecutter&type=repositories)
-- **DotNet**: Provides multiple templates to choose from the [list](./lib/frameworks/dotnet/)
-- **Node**:
+- 🍭 **Use DevDrive**: The `New-Project` function will automatically set a folder named `projects` in your DevDrive location. If DevDrive is not found, it will be created at `$HOME/projects`.
+- 🍪 **CookieCutter**: A command line to initialize new project from [GitHub Repositories Templates](https://github.com/search?q=cookiecutter&type=repositories)
+- 🌈 **DotNet**: Provides multiple templates to choose from the [list](./lib/frameworks/dotnet/)
+- 🧼 **Node**:
   - Initializes new project with your preferred package manager **(bun|npm|pnpm|yarn)**.
   - Provides multiple WebFrameworks to choose from.
-- **PHP**:
+- ❄️ **PHP**:
   - Web Frameworks available:
     - [CakePHP](https://cakephp.org/)
     - [CodeIgniter](https://codeigniter.com/)
@@ -36,10 +54,10 @@
     - [Slim](https://www.slimframework.com/)
     - [Symfony](https://symfony.com/doc/current/index.html)
     - [Yii](https://www.yiiframework.com/)
-- **Python**:
+- 🔥 **Python**:
   - Options to first setup your project's dependencies and frameworks.
   - Multiple addons available for each framework!
-- **Rust**:
+- 🍰 **Rust**:
   - Include some Frontend/Backend Frameworks for Rust.
   - Simple `main.rs` [templates](./templates/) for framework
 - Beautiful [README.md template](./templates/readme-template.md)
@@ -73,10 +91,16 @@ Use cookiecutter:
 New-Project -ProjectName [ProjectName] -CookieCutter
 ```
 
+Remove a project:
+
+```pwsh
+Remove-Project -ProjectName [ProjectName] -Github
+```
+
 **Options available:**
 
-- Language: _Choose a supported language_ (dotnet|node|php|python|rust|unknown)
-- Github: (optional) Create a GitHub Repository
+- Language: _Choose a supported language_ (dotnet | node | php | python | rust | unknown)
+- Github: (optional) Create/Remove a GitHub Repository
 - CookieCutter: (optional) Create a project from CookieCutter's template. **_Note that when using this option, you do not need to specify the Language field_**
 
 ## 🤝 Contribute
