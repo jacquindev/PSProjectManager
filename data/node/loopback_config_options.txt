@@ -1,0 +1,12 @@
+Include Dockerfile and .dockerignore
+Include repository imports and RepositoryMixin
+Include service-proxy imports and ServiceMixin
+Include ApiConnectComponent
+Enable eslint
+Enable prettier
+Enable mocha
+Use @loopback/build
+Use preconfigured EditorConfig settings
+Use preconfigured VSCode settings
+Mark the project private (excluded from npm publish)
+Format generated code using npm run lint:fix

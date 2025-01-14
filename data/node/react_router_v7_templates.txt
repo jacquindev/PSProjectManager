@@ -1,0 +1,8 @@
+remix-run/react-router-templates/cloudflare-d1
+remix-run/react-router-templates/cloudflare
+remix-run/react-router-templates/default
+remix-run/react-router-templates/javascript
+remix-run/react-router-templates/netlify
+remix-run/react-router-templates/node-custom-server
+remix-run/react-router-templates/node-postgres
+remix-run/react-router-templates/vercel

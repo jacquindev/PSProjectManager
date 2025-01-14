@@ -1,0 +1,9 @@
+vanilla-ts
+vue-ts
+react-ts
+react-swc-ts
+preact-ts
+lit-ts
+svelte-ts
+solid-ts
+qwik-ts

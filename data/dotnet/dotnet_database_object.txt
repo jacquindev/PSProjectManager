@@ -1,0 +1,8 @@
+Database table
+Database view
+Inline function
+Scalar function
+Stored procedure
+Table-valued function
+User-defined data type
+User-defined table type

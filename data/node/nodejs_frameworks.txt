@@ -1,0 +1,15 @@
+AdonisJS
+Astro
+Angular
+Fastify
+Hono
+LoopBack
+Meteor
+NestJS
+NextJS
+SailsJS
+SvelteKit
+React Router v7 (latest Remix)
+Remix
+Turborepo
+Vite

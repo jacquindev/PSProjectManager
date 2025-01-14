@@ -1,0 +1,9 @@
+vanilla
+vue
+react
+react-swc
+preact
+lit
+svelte
+solid
+qwik

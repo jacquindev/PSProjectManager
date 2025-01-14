@@ -1,0 +1,411 @@
+{
+	"packages": [
+		{
+			"id": "Amazon.Lambda.Tools",
+			"frameworks": "net5.0",
+			"doc": "https://github.com/aws/aws-extensions-for-dotnet-cli#aws-extensions-for-net-cli",
+			"desc": "Extensions to the dotnet CLI to simplify the process of building and publishing .NET Core applications to AWS services."
+		},
+		{
+			"id": "AWS.CodeArtifact.NuGet.CredentialProvider",
+			"frameworks": "net5.0",
+			"doc": "https://aws.amazon.com/codeartifact/",
+			"desc": "A tool to configure NuGet credential provider for AWS CodeArtifact sources."
+		},
+		{
+			"id": "AWS.Deploy.Tools",
+			"frameworks": "net6.0",
+			"doc": "https://aws.github.io/aws-dotnet-deploy/",
+			"desc": "AWS Deploy Tool for .NET is an interactive tool for the .NET CLI and the AWS Toolkit for Visual Studio that helps deploy .NET applications with minimum AWS knowledge, and with the fewest clicks or commands."
+		},
+		{
+			"id": "Cake.Tool",
+			"frameworks": "net8.0",
+			"doc": "https://cakebuild.net/docs/",
+			"desc": "Cake (C# Make) is a build automation system with a C# DSL to do things like compiling code, copy files/folders, running unit tests, compress files and build NuGet packages."
+		},
+		{
+			"id": "coverlet.console",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/GlobalTool.md",
+			"desc": "Coverlet is a cross platform code coverage tool for .NET, with support for line, branch and method coverage."
+		},
+		{
+			"id": "Credfeto.ChangeLog.Cmd",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/credfeto/changelog-manager#changelog-manager-net-tool",
+			"desc": "Tool for updating and extracting changelogs."
+		},
+		{
+			"id": "CurlGenerator",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/christianhelle/curlgenerator#curl-request-generator",
+			"desc": "Generate cURL requests from OpenAPI specifications v2.0 and v3.0."
+		},
+		{
+			"id": "CycloneDX",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/CycloneDX/cyclonedx-dotnet#cyclonedx-module-for-net",
+			"desc": "A .NET Core global tool to generate CycloneDX bill-of-material documents for use with Software Composition Analysis (SCA)."
+		},
+		{
+			"id": "dd-trace",
+			"frameworks": "net5.0",
+			"doc": "https://github.com/DataDog/dd-trace-dotnet#datadog-apm-net-client-libraries",
+			"desc": "Auto-instrumentation dotnet global tool for Datadog APM"
+		},
+		{
+			"id": "docfx",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/dotnet/docfx#build-your-docs-with-docfx",
+			"desc": "Build your technical documentation site with docfx, with landing pages, markdown, API reference docs for .NET, REST API and more."
+		},
+		{
+			"id": "dotnet-affected",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/leonardochaia/dotnet-affected#dotnet-affected",
+			"desc": ".NET tool for determining which projects are affected by a set of changes. Useful for large projects or monorepos."
+		},
+		{
+			"id": "dotnet-aspnet-codegenerator",
+			"frameworks": "net8.0",
+			"doc": "https://www.nuget.org/packages/dotnet-aspnet-codegenerator",
+			"desc": "Code Generation tool for ASP.NET Core. Contains the dotnet-aspnet-codegenerator command used for generating controllers and views."
+		},
+		{
+			"id": "dotnet-certificate-tool",
+			"frameworks": "net5.0",
+			"doc": "https://github.com/stylianosnicoletti/dotnet-certificate-tool#dotnet-certificate-tool",
+			"desc": "Command line tool to install and remove certificates from the current user's store. Mainly used to workaround the limitation of certificates installed in the current user's store in Unix hosts."
+		},
+		{
+			"id": "dotnet-counters",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/dotnet/diagnostics/blob/main/documentation/dotnet-counters-instructions.md",
+			"desc": "Monitor performance counters of a .NET Core application in real time."
+		},
+		{
+			"id": "dotnet-coverage",
+			"frameworks": "net6.0",
+			"doc": "https://learn.microsoft.com/en-us/dotnet/core/additional-tools/dotnet-coverage",
+			"desc": "Enables the cross-platform collection of code coverage data of a running process. Provides cross-platform merging of code coverage reports."
+		},
+		{
+			"id": "dotnet-debugger-extensions",
+			"frameworks": "net6.0",
+			"doc": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-debugger-extensions",
+			"desc": "Enable better debugging experience in native debuggers like WinDbg and LLDB."
+		},
+		{
+			"id": "dotnet-dump",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/dotnet/diagnostics/blob/main/documentation/dotnet-dump-instructions.md",
+			"desc": "Dump collection and analysis utility."
+		},
+		{
+			"id": "dotnet-ef",
+			"frameworks": "net8.0",
+			"doc": "https://learn.microsoft.com/en-us/ef/core/",
+			"desc": "The Entity Framework Core tools help with design-time development tasks. They're primarily used to manage Migrations and to scaffold a DbContext and entity types by reverse engineering the schema of a database."
+		},
+		{
+			"id": "dotnet-gcdump",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/dotnet/diagnostics/blob/main/documentation/dotnet-gcdump-instructions.md",
+			"desc": "Heap analysis tool that collects gcdumps of live .NET processes."
+		},
+		{
+			"id": "dotnet-monitor",
+			"frameworks": "net6.0",
+			"doc": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-monitor",
+			"desc": "A way to monitor .NET applications in production environments and to collect diagnostic artifacts (for example, dumps, traces, logs, and metrics) on-demand or using automated rules for collecting under specified conditions."
+		},
+		{
+			"id": "dotnet-outdated-tool",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/dotnet-outdated/dotnet-outdated#dotnet-outdated",
+			"desc": "A .NET Core global tool to display and update outdated NuGet packages in a project."
+		},
+		{
+			"id": "dotnet-reportgenerator-globaltool",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/danielpalme/ReportGenerator",
+			"desc": "ReportGenerator converts coverage reports generated by coverlet, OpenCover, dotCover, Visual Studio, NCover, Cobertura, JaCoCo, Clover, gcov, or lcov into human readable reports in various formats. The reports show the coverage quotas and also visualize which lines of your source code have been covered."
+		},
+		{
+			"id": "dotnet-script",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/dotnet-script/dotnet-script#dotnet-script",
+			"desc": "Run C# scripts from the .NET CLI, define NuGet packages inline and edit/debug them in VS Code - all of that with full language services support from OmniSharp."
+		},
+		{
+			"id": "dotnet-serve",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/natemcmaster/dotnet-serve#dotnet-serve",
+			"desc": "Simple command-line HTTPS server for the .NET Core CLI"
+		},
+		{
+			"id": "dotnet-sos",
+			"frameworks": "net6.0",
+			"doc": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-sos",
+			"desc": "Diagnostic SOS installer"
+		},
+		{
+			"id": "dotnet-stack",
+			"frameworks": "net6.0",
+			"doc": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-stack",
+			"desc": ".NET Stack Printing Tool. Captures and prints the managed stacks for all threads in the target .NET process. Utilizes EventPipe tracing provided by the .NET Core runtime."
+		},
+		{
+			"id": "dotnet-stryker",
+			"frameworks": "net8.0",
+			"doc": "https://stryker-mutator.io/docs/stryker-net/introduction/",
+			"desc": "Stryker offers mutation testing for your .NET Core and .NET Framework projects. It allows you to test your tests by temporarily inserting bugs in your source code."
+		},
+		{
+			"id": "dotnet-subset",
+			"doc": "https://blog.theodo.ma/docker-build-caching-for-dotnet-applications-done-right-with-dotnet-subset/",
+			"desc": "dotnet-subset is a .NET tool that copies a subset of files from a repository to a directory. The tool is mainly used in Dockerfiles to optimize the docker build caching for 'dotnet restore' instructions."
+		},
+		{
+			"id": "dotnet-symbol",
+			"frameworks": "net6.0",
+			"doc": "https://learn.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-symbol",
+			"desc": "Downloads files (symbols, DAC, modules, etc.) needed for debugging core dumps and minidumps. This can be useful when debugging dumps captured on another machine. dotnet-symbol can download modules and symbols needed to analyze the dump."
+		},
+		{
+			"id": "dotnet-t4",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/mono/t4/blob/main/dotnet-t4/readme.md",
+			"desc": "dotnet-t4 is a command-line tool for processing T4 templates, a general-purpose way to generate text or code files using C#."
+		},
+		{
+			"id": "dotnet-trace",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/dotnet/diagnostics/blob/main/documentation/dotnet-trace-instructions.md",
+			"desc": "Enable the collection of events for a running .NET Core Application to a local trace file."
+		},
+		{
+			"id": "dotnet-xdt",
+			"frameworks": "net5.0",
+			"doc": "https://www.nuget.org/packages/dotnet-xdt",
+			"desc": "XDT (XML Document Transform) tool for .NET Core."
+		},
+		{
+			"id": "Excubo.WebCompiler",
+			"frameworks": "net5.0",
+			"doc": "https://github.com/excubo-ag/WebCompiler#excubowebcompiler",
+			"desc": "Excubo.WebCompiler is a dotnet global tool that compiles Scss files, minimizes css / js assets, and gzips files."
+		},
+		{
+			"id": "Fable",
+			"frameworks": "net8.0",
+			"doc": "https://fable.io/docs/",
+			"desc": "F# to JS compiler"
+		},
+		{
+			"id": "fake-cli",
+			"frameworks": "net6.0",
+			"doc": "https://fake.build/",
+			"desc": "FAKE - F# Make - is a build automation tool for .NET. Tasks and dependencies are specified in a DSL which is integrated in F#."
+		},
+		{
+			"id": "fantomas",
+			"frameworks": "net6.0",
+			"doc": "https://fsprojects.github.io/fantomas/docs/index.html",
+			"desc": "F# source code formatter, inspired by scalariform for Scala, ocp-indent for OCaml and PythonTidy for Python."
+		},
+		{
+			"id": "FluentMigrator.DotNet.Cli",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/fluentmigrator/fluentmigrator#fluentmigrator----",
+			"desc": "FluentMigrator is a an open-source .NET library that allows you to manage and version database schema changes using a code-first approach. With FluentMigrator, you can define database migrations as code rather than maintaining SQL scripts or using other tools."
+		},
+		{
+			"id": "GitVersion.Tool",
+			"frameworks": "net8.0",
+			"doc": "https://gitversion.net/docs/",
+			"desc": "GitVersion is a tool that generates a Semantic Version number based on your Git history."
+		},
+		{
+			"id": "HttpGenerator",
+			"frameworks":"net8.0",
+			"doc": "https://github.com/christianhelle/httpgenerator#http-file-generator",
+			"desc": "HttpGenerator is a CLI tool for generating .http files from OpenAPI (Swagger) specifications for the popular REST Client IDE extension."
+		},
+		{
+			"id": "Husky",
+			"frameworks": "net6.0",
+			"doc": "https://alirezanet.github.io/Husky.Net/",
+			"desc": "Git hooks made easy with Husky.Net internal task runner! 🐶 It brings the dev-dependency concept to the .NET world!"
+		},
+		{
+			"id": "JetBrains.dotCover.CommandLineTools",
+			"frameworks": "net5.0",
+			"doc": "https://www.jetbrains.com/dotcover/documentation/",
+			"desc": "The .NET Unit Test Runner and Code Coverage Tool"
+		},
+		{
+			"id": "JetBrains.dotCover.GlobalTool",
+			"frameworks": "net5.0",
+			"doc": "https://www.jetbrains.com/help/dotcover/Getting_Started_with_dotCover.html",
+			"desc": "A cross-platform .NET tool for code coverage."
+		},
+		{
+			"id": "JetBrains.ReSharper.GlobalTools",
+			"frameworks": "net5.0",
+			"doc": "https://www.jetbrains.com/resharper/features/command-line.html",
+			"desc": "ReSharper Command Line Tools is a set of free standalone tools that execute hundreds of ReSharper code inspections outside of Visual Studio and additionally find code duplicates. The tools can be used without installing ReSharper and integrated with Continuous Integration or code quality management servers."
+		},
+		{
+			"id": "minver-cli",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/adamralph/minver#minver",
+			"desc": "A minimalist command line tool for versioning any Git repository using tags."
+		},
+		{
+			"id": "nbgv",
+			"frameworks": "net8.0",
+			"doc": "https://dotnet.github.io/Nerdbank.GitVersioning/docs/nbgv-cli.html",
+			"desc": "A .NET Core Tool that can install, read and set version information based on git history, using Nerdbank.GitVersioning."
+		},
+		{
+			"id": "OctoNotes.GitHubUpdater.Tool",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/OctopusDeploy",
+			"desc": "OctoNotes is a tool for generating release notes from Git repositories. Using the information generated by OctoNotes, we can calculate which release a fix landed in, across multiple release branches."
+		},
+		{
+			"id": "Octopus.DotNet.Cli",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/OctopusDeploy/cli/blob/main/README.md",
+			"desc": "Command Line Interface for Octopus Deploy"
+		},
+		{
+			"id": "Microsoft.CST.DevSkim.CLI",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/Microsoft/DevSkim#devskim",
+			"desc": "DevSkim is a framework and language analyzer that provides inline security analysis. This is a Dotnet Tool package. For the library package, see Microsoft.CST.DevSkim."
+		},
+		{
+			"id": "Microsoft.Playwright.CLI",
+			"frameworks": "net5.0",
+			"doc": "https://playwright.dev/dotnet/docs/intro",
+			"desc": "Playwright enables reliable end-to-end testing for modern web apps. It is built to enable cross-browser web automation that is ever-green, capable, reliable and fast."
+		},
+		{
+			"id": "Microsoft.SqlPackage",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/microsoft/DacFx",
+			"desc": "SqlPackage is a command-line utility that automates database development tasks by exposing some of the public Data-Tier Application Framework (DacFx) APIs."
+		},
+		{
+			"id": "MiniCover",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/lucaslorentz/minicover#minicover",
+			"desc": "Cross platform code coverage tool for .NET Core"
+		},
+		{
+			"id": "NSwag.ConsoleCore",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/RicoSuter/NSwag#nswag-the-swaggeropenapi-toolchain-for-net-aspnet-core-and-typescript",
+			"desc": "NSwag: The OpenAPI/Swagger API toolchain for .NET and TypeScript"
+		},
+		{
+			"id": "nuget-license",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/sensslen/nuget-license#nuget-license-utility---",
+			"desc": ".NET Core tool to print or save all the licenses of a project"
+		},
+		{
+			"id": "Nuke.GlobalTool",
+			"frameworks": "net8.0",
+			"doc": "https://nuke.build/docs/introduction/",
+			"desc": "The AKEless Build System for C#/.NET Write automation tools and CI/CD pipelines in plain C# and with access to all .NET libraries. Tedious commit cycles are expensive. Instead, debug and test your builds locally."
+		},
+		{
+			"id": "nukeeper",
+			"frameworks": "net5.0",
+			"doc": "https://github.com/NuKeeperDotNet/NuKeeper/#nukeeper",
+			"desc": "Automagically update NuGet packages in all .NET projects."
+		},
+		{
+			"id": "Paket",
+			"frameworks": "net5.0",
+			"doc": "https://fsprojects.github.io/Paket/",
+			"desc": "A dependency manager for .NET with support for NuGet packages and git repositories."
+		},
+		{
+			"id": "PowerShell",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/PowerShell/PowerShell/blob/master/docs/building/windows-core.md",
+			"desc": "PowerShell global tool"
+		},
+		{
+			"id": "Rapicgen",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/christianhelle/apiclientcodegen#cross-platform-command-line-tool",
+			"desc": "A collection of code generators for Swagger / OpenAPI specification files."
+		},
+		{
+			"id": "Refitter",
+			"frameworks": "net8.0",
+			"doc": "https://github.com/christianhelle/refitter#refitter",
+			"desc": "Refitter is a CLI tool for generating a C# REST API Client using the Refit library from OpenAPI specifications."
+		},
+		{
+			"id": "snapx",
+			"frameworks": "net9.0",
+			"doc": "https://github.com/fintermobilityas/snapx#-about-snapx",
+			"desc": "snapx is a powerful xplat .NET application with built-in support for delta updates, release channels (test, staging, production) and automatic deployment using GitHub Actions. Updates can delivered via NuGet or network share (UNC)."
+		},
+		{
+			"id": "security-scan",
+			"frameworks": "net5.0",
+			"doc": "https://security-code-scan.github.io/",
+			"desc": "Stand-alone .NET tool for https://security-code-scan.github.io/"
+		},
+		{
+			"id": "SpecFlow.Plus.LivingDoc.CLI",
+			"frameworks": "net5.0",
+			"doc": "https://docs.specflow.org/projects/specflow-livingdoc/en/latest/LivingDocGenerator/Installing-the-command-line-tool.html",
+			"desc": "A dotnet tool for SpecFlow to generate a shareable HTML Gherkin feature execution report (living documentation)."
+		},
+		{
+			"id": "SpecSync.AzureDevOps",
+			"frameworks": "net5.0",
+			"doc": "https://docs.specsolutions.eu/specsync",
+			"desc": "SpecSync for Azure DevOps is a synchronization tool that synchronizes Gherkin feature files with Azure DevOps (TFS/VSTS)."
+		},
+		{
+			"id": "StrawberryShake.Tools",
+			"frameworks": "net8.0",
+			"doc": "https://chillicream.com/docs/strawberryshake/v14/get-started/console",
+			"desc": "Strawberry Shake is an incredible, open-source GraphQL client for the .NET ecosystem, that helps developers to build awesome UIs in Blazor, Maui, and more."
+		},
+		{
+			"id": "Swashbuckle.AspNetCore.Cli",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/domaindrivendev/Swashbuckle.AspNetCore#swashbuckleaspnetcore",
+			"desc": "GitVersion is a tool that generates a Semantic Version number based on your Git history."
+		},
+		{
+			"id": "trx2junit",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/gfoidl/trx2junit#trx2junit-net-core-global-tool",
+			"desc": "Transforms XML from trx-Testresults to JUnit-Testresults / trx to JUnit XML and the other way round."
+		},
+		{
+			"id": "Uno.Check",
+			"frameworks": "net5.0",
+			"doc": "https://github.com/unoplatform/uno.check/blob/main/doc/using-uno-check.md",
+			"desc": "A .NET tools for helping set up your Uno Platform environment."
+		},
+		{
+			"id": "wix",
+			"frameworks": "net6.0",
+			"doc": "https://github.com/wixtoolset/wix#wix-toolset",
+			"desc": "The WiX Toolset lets developers create installers for Windows. This package contains the WiX Toolset command-line interface."
+		}
+	]
+}

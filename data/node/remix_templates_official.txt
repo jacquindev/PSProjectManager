@@ -1,0 +1,17 @@
+remix-run/blues-stack
+remix-run/indie-stack
+remix-run/grunge-stack
+remix-run/remix/templates/cloudflare
+remix-run/remix/templates/cloudflare-workers
+remix-run/remix/templates/express
+remix-run/remix/templates/remix
+remix-run/remix/templates/remix-javascript
+remix-run/remix/templates/spa
+remix-run/remix/templates/classic-remix-compiler/arc
+remix-run/remix/templates/classic-remix-compiler/cloudflare-pages
+remix-run/remix/templates/classic-remix-compiler/cloudflare-workers
+remix-run/remix/templates/classic-remix-compiler/deno
+remix-run/remix/templates/classic-remix-compiler/express
+remix-run/remix/templates/classic-remix-compiler/fly
+remix-run/remix/templates/classic-remix-compiler/remix
+remix-run/remix/templates/classic-remix-compiler/remix-javascript
